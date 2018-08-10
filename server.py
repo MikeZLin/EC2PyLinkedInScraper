@@ -35,34 +35,39 @@ def jsonout (res):
     #Make the output as small as possible by using short separators
     return json.dumps(res, separators=(',',':'))
 class server(object):
-        @cherrypy.expose
-        def default(self,*args,**kwargs):
-            """Return the emails sent to/from the candidate that fulfill certain conditions"""
-            body = cherrypy.request.body.read().decode()
-            params = json.loads(body)
-            result = {}
-            cherrypy.response.headers['Content-type'] = "application/json"
-            try:
-                print('request key',params['key'] )
-            except:
-                params['key'] = ''
-            if args.apikey == params['key']:
-                if params['url']:
-                    with ProfileScraper(driver=driver,login=login_opts) as scraper:
-                        profile = scraper.scrape(url=params['url'])
-                    result['status'] = 200
-                    result['data'] = profile.to_dict() 
-                    cherrypy.response.status = result["status"]
-                    return jsonout (result)
-        
-            result['status'] = 400
-            result['data'] = "Error"
-            result['status'] = 200
-            result['data'] = profile.to_dict() 
-            cherrypy.response.status = result["status"]
-            return jsonout (result)
+    @cherrypy.expose
+    def default(self,*args,**kwargs):
+        """Return the emails sent to/from the candidate that fulfill certain conditions"""
+        body = cherrypy.request.body.read().decode()
+        params = json.loads(body)
+        result = {}
+        cherrypy.response.headers['Content-type'] = "application/json"
+        try:
+            print('request key',params['key'] )
+        except:
+            params['key'] = ''
+        if args.apikey == params['key']:
+            if params['url']:
+                with ProfileScraper(driver=driver,login=login_opts) as scraper:
+                    profile = scraper.scrape(url=params['url'])
+                result['status'] = 200
+                result['data'] = profile.to_dict() 
+                cherrypy.response.status = result["status"]
+                return jsonout (result)
+    
+        result['status'] = 400
+        result['data'] = "Error"
+        result['status'] = 200
+        result['data'] = profile.to_dict() 
+        cherrypy.response.status = result["status"]
+        return jsonout (result)
 
 
+server2 = cherrypy._cpserver.Server()
+server2.socket_port = 80
+server2._socket_host = '0.0.0.0'
+server2.thread_pool = 30
+server2.subscribe ()
 
 
-cherrypy.quickstart(server())
+cherrypy.quickstart(server(), config="config.txt")

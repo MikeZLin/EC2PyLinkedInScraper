@@ -1,0 +1,14 @@
+[global]
+tools.gzip.on : True
+tools.staticdir.root : '/var/srv'
+server.protocol_version = "HTTP/1.1"
+tools.staticfile.root : '/var/srv'
+log.environment: 'debug'
+#environment: 'production'
+log.error_file: 'site.log'
+log.screen: True
+tools.caching.on = False
+tools.caching.delay = 0
+
+
+
