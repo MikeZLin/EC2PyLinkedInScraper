@@ -1,5 +1,6 @@
 import cherrypy
 import argparse
+import atexit
 from ProfileScraper import ProfileScraper
 from selenium import webdriver
 import json
@@ -23,7 +24,10 @@ chrome_options.add_argument('--window-size=1280x1696')
 chrome_options.add_argument('user-agent=Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36')
 driver = webdriver.Chrome(chrome_options=chrome_options)
 
-
+def closeDriver():
+    global driver
+    driver.close()
+atexit.register(closeDriver)
 
 def jsonout (res):
     cherrypy.response.headers['Content-type'] = "application/json"
