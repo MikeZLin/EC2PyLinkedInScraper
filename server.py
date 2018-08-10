@@ -1,5 +1,4 @@
 import cherrypy
-import argparse
 import atexit
 from ProfileScraper import ProfileScraper
 from selenium import webdriver
@@ -10,11 +9,9 @@ import json
 # Config
 #------------------------------------------------
 # Linked in Login details instead of using LI_AT cookie
-login_opts = {'dologin':True, 'usr':'', 'p':''} # Todo: Modify from launch parameters or Post Request
+cookie = 'AQEDASfurQADPjbSAAABZSQtFdkAAAFlSDmZ2U4AZL-Dcf1UfuhABoNEiWUqwsZBk_BZYTdPARPEQAEXg7OZTqWc5QzxUn6fZikTw6JV43Ir8P4xSsdIl4AElUyRHOPUf7q28mw4hWV7LgTQYqFQ_Vaa'
 #------------------------------------------------
-parser = argparse.ArgumentParser(description='Launch Scraping Server')
-parser.add_argument('--passkey', dest='apikey', nargs='?',default='', help='passkey to make the the scraper only respond private requests')
-args = parser.parse_args()
+
 
 chrome_options = webdriver.ChromeOptions()
 chrome_options.add_argument('--headless')
@@ -38,22 +35,20 @@ class server(object):
     @cherrypy.expose
     def default(self,*args,**kwargs):
         """Return the emails sent to/from the candidate that fulfill certain conditions"""
+        global cookie
         body = cherrypy.request.body.read().decode()
         params = json.loads(body)
         result = {}
         cherrypy.response.headers['Content-type'] = "application/json"
-        try:
-            print('request key',params['key'] )
-        except:
-            params['key'] = ''
-        if args.apikey == params['key']:
-            if params['url']:
-                with ProfileScraper(driver=driver,login=login_opts) as scraper:
-                    profile = scraper.scrape(url=params['url'])
-                result['status'] = 200
-                result['data'] = profile.to_dict() 
-                cherrypy.response.status = result["status"]
-                return jsonout (result)
+        if 'key' in params.keys():
+            cookie = params['key']        
+        if 'url' in params.keys():
+            with ProfileScraper(driver=driver,cookie=cookie) as scraper:
+                profile = scraper.scrape(url=params['url'])            
+            result['status'] = 200
+            result['data'] = profile.to_dict() 
+            cherrypy.response.status = result["status"]
+            return jsonout (result)
     
         result['status'] = 400
         result['data'] = "Error"
@@ -71,3 +66,5 @@ server2.subscribe ()
 
 
 cherrypy.quickstart(server(), config="config.txt")
+cherrypy.config["tools.encode.on"] = True
+cherrypy.config["tools.encode.encoding"] = "utf-8"

@@ -25,11 +25,11 @@ class Scraper(object):
         - timeout {float}: time to wait for page to load first batch of async content
     """
 
-    def __init__(self, cookie=None, scraperInstance=None, driver=selenium.webdriver.Chrome, driver_options={},login={'dologin':False,'usr':'', 'p':''},scroll_pause=0.1, scroll_increment=300, timeout=30):
+    def __init__(self, cookie=None, scraperInstance=None, driver=selenium.webdriver.Chrome, driver_options={},scroll_pause=0.1, scroll_increment=300, timeout=30):
         if type(self) is Scraper:
             raise Exception(
                 'Scraper is an abstract class and cannot be instantiated directly')
-        self.login = login
+
         if scraperInstance:
             self.was_passed_instance = True
             self.driver = scraperInstance.driver
@@ -39,20 +39,14 @@ class Scraper(object):
             return
 
         self.was_passed_instance = False
-        if not cookie:
-            if self.login['dologin']:
-                pass
-            elif 'LI_AT' not in environ:
+        if cookie == None or cookie =='':
+            if 'LI_AT' not in environ:
                 raise ValueError(
                     'Must either define LI_AT environment variable, or pass a cookie string to the Scraper')
-            else:
-                cookie = environ['LI_AT']
         self.driver = driver #(**driver_options)
         self.scroll_pause = scroll_pause
         self.scroll_increment = scroll_increment
         self.timeout = timeout
-        if login['dologin']:
-            self.doLogin()
         print(self.is_signed_in())
         self.driver.get('http://www.linkedin.com')
         self.driver.set_window_size(1200, 1000)
