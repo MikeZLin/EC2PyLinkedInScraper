@@ -47,7 +47,7 @@ class Scraper(object):
         self.scroll_pause = scroll_pause
         self.scroll_increment = scroll_increment
         self.timeout = timeout
-        print(self.is_signed_in())
+        
         self.driver.get('http://www.linkedin.com')
         self.driver.set_window_size(1200, 1000)
         if cookie:
@@ -61,6 +61,7 @@ class Scraper(object):
             self.driver.find_element_by_id("profile-nav-item")
             return True
         except:
+            raise ValueError("Not Logged In")
             pass
         return False
 

@@ -19,6 +19,7 @@ class ProfileScraper(Scraper):
 
     def scrape(self, url='', user=None):
         self.load_profile_page(url, user)
+        print(self.is_signed_in())
         return self.get_profile()
 
     def load_profile_page(self, url='', user=None):
