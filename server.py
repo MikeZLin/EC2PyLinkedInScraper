@@ -51,7 +51,8 @@ class server(object):
             result['data'] = profile.to_dict() 
             cherrypy.response.status = result["status"]
             closeDriver()
-            return jsonout (result)
+            return jsonout (result).encode('utf8')
+
     
         result['status'] = 400
         result['data'] = "Error"
@@ -59,7 +60,8 @@ class server(object):
         result['data'] = profile.to_dict() 
         cherrypy.response.status = result["status"]
         closeDriver()
-        return jsonout (result)
+        return jsonout (result).encode('utf8')
+
 
 
 server2 = cherrypy._cpserver.Server()
