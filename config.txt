@@ -9,6 +9,8 @@ log.error_file: 'site.log'
 log.screen: True
 tools.caching.on = False
 tools.caching.delay = 0
+tools.encode.on : True
+tools.encode.encoding : 'utf-8'
 
 
 
