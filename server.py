@@ -13,13 +13,7 @@ cookie = 'AQEDASfurQADPjbSAAABZSQtFdkAAAFlSDmZ2U4AZL-Dcf1UfuhABoNEiWUqwsZBk_BZYT
 #------------------------------------------------
 
 
-chrome_options = webdriver.ChromeOptions()
-chrome_options.add_argument('--headless')
-chrome_options.add_argument('--no-sandbox')
-chrome_options.add_argument('--disable-gpu')
-chrome_options.add_argument('--window-size=1280x1696')
-chrome_options.add_argument('user-agent=Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36')
-driver = webdriver.Chrome(chrome_options=chrome_options)
+
 
 def closeDriver():
     global driver
@@ -36,6 +30,14 @@ class server(object):
     def default(self,*args,**kwargs):
         """Return the emails sent to/from the candidate that fulfill certain conditions"""
         global cookie
+        global driver
+        chrome_options = webdriver.ChromeOptions()
+        chrome_options.add_argument('--headless')
+        chrome_options.add_argument('--no-sandbox')
+        chrome_options.add_argument('--disable-gpu')
+        chrome_options.add_argument('--window-size=1280x1696')
+        chrome_options.add_argument('user-agent=Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36')
+        driver = webdriver.Chrome(chrome_options=chrome_options)
         body = cherrypy.request.body.read().decode()
         params = json.loads(body)
         result = {}
@@ -48,6 +50,7 @@ class server(object):
             result['status'] = 200
             result['data'] = profile.to_dict() 
             cherrypy.response.status = result["status"]
+            closeDriver()
             return jsonout (result)
     
         result['status'] = 400
@@ -55,6 +58,7 @@ class server(object):
         result['status'] = 200
         result['data'] = profile.to_dict() 
         cherrypy.response.status = result["status"]
+        closeDriver()
         return jsonout (result)
 
 
