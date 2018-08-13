@@ -3,7 +3,8 @@ from ProfileScraper import ProfileScraper
 from selenium import webdriver
 import json
 import os
-
+import sys
+import traceback
 #================================================
 # Config
 #------------------------------------------------
@@ -28,9 +29,9 @@ chrome_options.add_argument('--ignore-certificate-errors')
 chrome_options.add_argument('--homedir=/tmp')
 chrome_options.add_argument('--disk-cache-dir=/tmp/cache-dir')
 chrome_options.add_argument('user-agent=Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36')
-chrome_options.binary_location = os.getcwd() + "/bin/headless-chromium"
+#chrome_options.binary_location = os.getcwd() + "/bin/headless-chromium"
 driver = webdriver.Chrome(chrome_options=chrome_options)
-
+scraper = None
 def closeDriver():
     global driver
     driver.close()
@@ -39,12 +40,15 @@ atexit.register(closeDriver)
 
 def handler(params,context=''):
     global cookie
+    global scraper
     if 'key' in params.keys():
         cookie = params['key']        
+    if scraper == None:
+        scraper = ProfileScraper(driver=driver,cookie=cookie) 
     if 'url' in params.keys():
         try:
-            with ProfileScraper(driver=driver,cookie=cookie) as scraper:
-                profile = scraper.scrape(url=params['url'])            
+            profile = scraper.scrape(url=params['url'])
             return profile.to_dict()
         except Exception as e:
+            traceback.print_exc(file=sys.stdout)
             return e

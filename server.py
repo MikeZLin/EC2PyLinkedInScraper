@@ -44,9 +44,14 @@ class server(object):
         cherrypy.response.headers['Content-type'] = "application/json"
         if 'key' in params.keys():
             cookie = params['key']        
+        print(cookie)
         if 'url' in params.keys():
             with ProfileScraper(driver=driver,cookie=cookie) as scraper:
-                profile = scraper.scrape(url=params['url'])            
+                try:
+                    profile = scraper.scrape(url=params['url'])            
+                except Exception as e:
+                    print(e)
+            driver.close()
             result['status'] = 200
             result['data'] = profile.to_dict() 
             cherrypy.response.status = result["status"]

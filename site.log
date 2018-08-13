@@ -1,0 +1,2418 @@
+[10/Aug/2018:11:19:31] ENGINE Listening for SIGUSR1.
+[10/Aug/2018:11:19:31] ENGINE Listening for SIGHUP.
+[10/Aug/2018:11:19:31] ENGINE Listening for SIGTERM.
+[10/Aug/2018:11:19:31] ENGINE Bus STARTING
+[10/Aug/2018:11:19:31] ENGINE Started monitor thread 'Autoreloader'.
+[10/Aug/2018:11:19:31] ENGINE Serving on http://127.0.0.1:8080
+[10/Aug/2018:11:19:32] ENGINE Serving on http://0.0.0.0
+[10/Aug/2018:11:19:32] ENGINE Bus STARTED
+[10/Aug/2018:11:19:54] HTTP 
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/cherrypy/_cprequest.py", line 627, in respond
+    self._do_respond(path_info)
+  File "/usr/local/lib/python3.5/dist-packages/cherrypy/_cprequest.py", line 663, in _do_respond
+    self.namespaces(self.config)
+  File "/usr/local/lib/python3.5/dist-packages/cherrypy/lib/reprconf.py", line 109, in __call__
+    exit(None, None, None)
+  File "/usr/local/lib/python3.5/dist-packages/cherrypy/_cptools.py", line 460, in __exit__
+    tool = getattr(self, name)
+AttributeError: 'Toolbox' object has no attribute 'utf8code'
+[10/Aug/2018:11:20:06] ENGINE Keyboard Interrupt: shutting down bus
+[10/Aug/2018:11:20:06] ENGINE Bus STOPPING
+[10/Aug/2018:11:20:06] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('0.0.0.0', 80)) shut down
+[10/Aug/2018:11:20:06] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('127.0.0.1', 8080)) shut down
+[10/Aug/2018:11:20:06] ENGINE Stopped thread 'Autoreloader'.
+[10/Aug/2018:11:20:06] ENGINE Bus STOPPED
+[10/Aug/2018:11:20:06] ENGINE Bus EXITING
+[10/Aug/2018:11:20:06] ENGINE Bus EXITED
+[10/Aug/2018:11:20:06] ENGINE Waiting for child threads to terminate...
+[10/Aug/2018:11:21:50] ENGINE Listening for SIGUSR1.
+[10/Aug/2018:11:21:50] ENGINE Listening for SIGTERM.
+[10/Aug/2018:11:21:50] ENGINE Listening for SIGHUP.
+[10/Aug/2018:11:21:50] ENGINE Bus STARTING
+[10/Aug/2018:11:21:50] ENGINE Started monitor thread 'Autoreloader'.
+[10/Aug/2018:11:21:50] ENGINE Serving on http://0.0.0.0
+[10/Aug/2018:11:21:50] ENGINE Serving on http://127.0.0.1:8080
+[10/Aug/2018:11:21:50] ENGINE Bus STARTED
+[10/Aug/2018:11:21:55] HTTP 
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/cherrypy/_cprequest.py", line 627, in respond
+    self._do_respond(path_info)
+  File "/usr/local/lib/python3.5/dist-packages/cherrypy/_cprequest.py", line 686, in _do_respond
+    response.body = self.handler()
+  File "/usr/local/lib/python3.5/dist-packages/cherrypy/lib/encoding.py", line 221, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/usr/local/lib/python3.5/dist-packages/cherrypy/_cpdispatch.py", line 54, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "server.py", line 42, in default
+    params = json.loads(body)
+  File "/usr/lib/python3.5/json/__init__.py", line 319, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib/python3.5/json/decoder.py", line 339, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/lib/python3.5/json/decoder.py", line 357, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+[10/Aug/2018:11:21:55] HTTP 
+Request Headers:
+  POSTMAN-TOKEN: ef3ebe30-ddac-4de2-905e-78ec8e4d49ec
+  CACHE-CONTROL: no-cache
+  Content-Type: multipart/form-data; boundary=--------------------------367249481141557613366095
+  HOST: 35.178.24.189
+  USER-AGENT: PostmanRuntime/7.2.0
+  ACCEPT-ENCODING: gzip, deflate
+  Content-Length: 207
+  CONNECTION: keep-alive
+  ACCEPT: */*
+  Remote-Addr: 89.197.174.98
+[10/Aug/2018:11:22:34] HTTP 
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/cherrypy/_cprequest.py", line 627, in respond
+    self._do_respond(path_info)
+  File "/usr/local/lib/python3.5/dist-packages/cherrypy/_cprequest.py", line 686, in _do_respond
+    response.body = self.handler()
+  File "/usr/local/lib/python3.5/dist-packages/cherrypy/lib/encoding.py", line 221, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/usr/local/lib/python3.5/dist-packages/cherrypy/_cpdispatch.py", line 54, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "server.py", line 41, in default
+    body = cherrypy.request.body.read().decode()
+  File "/usr/local/lib/python3.5/dist-packages/cherrypy/_cpreqbody.py", line 475, in read
+    return self.fp.read(size, fp_out)
+TypeError: read() takes from 1 to 2 positional arguments but 3 were given
+[10/Aug/2018:11:22:34] HTTP 
+Request Headers:
+  Content-Length: 0
+  HOST: 35.178.24.189:80
+  USER-AGENT: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36
+  Remote-Addr: 190.186.159.74
+[10/Aug/2018:11:25:07] HTTP 
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/cherrypy/_cprequest.py", line 627, in respond
+    self._do_respond(path_info)
+  File "/usr/local/lib/python3.5/dist-packages/cherrypy/_cprequest.py", line 686, in _do_respond
+    response.body = self.handler()
+  File "/usr/local/lib/python3.5/dist-packages/cherrypy/lib/encoding.py", line 221, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/usr/local/lib/python3.5/dist-packages/cherrypy/_cpdispatch.py", line 54, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "server.py", line 49, in default
+    if args.apikey == params['key']:
+AttributeError: 'tuple' object has no attribute 'apikey'
+[10/Aug/2018:11:25:07] HTTP 
+Request Headers:
+  POSTMAN-TOKEN: b262e895-f5d2-493b-a071-ed0c272fe398
+  CACHE-CONTROL: no-cache
+  Content-Type: application/json
+  HOST: 35.178.24.189
+  USER-AGENT: PostmanRuntime/7.2.0
+  ACCEPT-ENCODING: gzip, deflate
+  Content-Length: 59
+  CONNECTION: keep-alive
+  ACCEPT: */*
+  Remote-Addr: 89.197.174.98
+[10/Aug/2018:11:25:26] HTTP 
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/cherrypy/_cprequest.py", line 627, in respond
+    self._do_respond(path_info)
+  File "/usr/local/lib/python3.5/dist-packages/cherrypy/_cprequest.py", line 686, in _do_respond
+    response.body = self.handler()
+  File "/usr/local/lib/python3.5/dist-packages/cherrypy/lib/encoding.py", line 221, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/usr/local/lib/python3.5/dist-packages/cherrypy/_cpdispatch.py", line 54, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "server.py", line 49, in default
+    if args.apikey == params['key']:
+AttributeError: 'tuple' object has no attribute 'apikey'
+[10/Aug/2018:11:25:26] HTTP 
+Request Headers:
+  POSTMAN-TOKEN: 625e4261-a176-4f6b-b132-db6c78c00c84
+  CACHE-CONTROL: no-cache
+  Content-Type: application/json
+  HOST: 35.178.24.189
+  USER-AGENT: PostmanRuntime/7.2.0
+  ACCEPT-ENCODING: gzip, deflate
+  Content-Length: 68
+  CONNECTION: keep-alive
+  ACCEPT: */*
+  Remote-Addr: 89.197.174.98
+[10/Aug/2018:11:25:47] ENGINE Keyboard Interrupt: shutting down bus
+[10/Aug/2018:11:25:47] ENGINE Bus STOPPING
+[10/Aug/2018:11:25:47] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('127.0.0.1', 8080)) shut down
+[10/Aug/2018:11:25:47] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('0.0.0.0', 80)) shut down
+[10/Aug/2018:11:25:47] ENGINE Stopped thread 'Autoreloader'.
+[10/Aug/2018:11:25:47] ENGINE Bus STOPPED
+[10/Aug/2018:11:25:47] ENGINE Bus EXITING
+[10/Aug/2018:11:25:47] ENGINE Bus EXITED
+[10/Aug/2018:11:25:47] ENGINE Waiting for child threads to terminate...
+[10/Aug/2018:11:26:40] ENGINE Listening for SIGUSR1.
+[10/Aug/2018:11:26:40] ENGINE Listening for SIGTERM.
+[10/Aug/2018:11:26:40] ENGINE Listening for SIGHUP.
+[10/Aug/2018:11:26:40] ENGINE Bus STARTING
+[10/Aug/2018:11:26:40] ENGINE Started monitor thread 'Autoreloader'.
+[10/Aug/2018:11:26:40] ENGINE Serving on http://0.0.0.0
+[10/Aug/2018:11:26:40] ENGINE Serving on http://127.0.0.1:8080
+[10/Aug/2018:11:26:40] ENGINE Bus STARTED
+[10/Aug/2018:11:27:57] HTTP 
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/cherrypy/_cprequest.py", line 627, in respond
+    self._do_respond(path_info)
+  File "/usr/local/lib/python3.5/dist-packages/cherrypy/_cprequest.py", line 686, in _do_respond
+    response.body = self.handler()
+  File "/usr/local/lib/python3.5/dist-packages/cherrypy/lib/encoding.py", line 221, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/usr/local/lib/python3.5/dist-packages/cherrypy/_cpdispatch.py", line 54, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "server.py", line 41, in default
+    body = cherrypy.request.body.read().decode()
+  File "/usr/local/lib/python3.5/dist-packages/cherrypy/_cpreqbody.py", line 475, in read
+    return self.fp.read(size, fp_out)
+TypeError: read() takes from 1 to 2 positional arguments but 3 were given
+[10/Aug/2018:11:27:57] HTTP 
+Request Headers:
+  HOST: 35.178.24.189:80
+  Content-Length: 0
+  USER-AGENT: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36
+  Remote-Addr: 62.97.194.119
+[10/Aug/2018:11:28:45] HTTP 
+Traceback (most recent call last):
+  File "/srv/ProfileScraper.py", line 44, in load_profile_page
+    (By.CSS_SELECTOR, '.profile-unavailable'))
+  File "/usr/local/lib/python3.5/dist-packages/selenium/webdriver/support/wait.py", line 80, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/cherrypy/_cprequest.py", line 627, in respond
+    self._do_respond(path_info)
+  File "/usr/local/lib/python3.5/dist-packages/cherrypy/_cprequest.py", line 686, in _do_respond
+    response.body = self.handler()
+  File "/usr/local/lib/python3.5/dist-packages/cherrypy/lib/encoding.py", line 221, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/usr/local/lib/python3.5/dist-packages/cherrypy/_cpdispatch.py", line 54, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "server.py", line 52, in default
+    profile = scraper.scrape(url=params['url'])
+  File "/srv/ProfileScraper.py", line 21, in scrape
+    self.load_profile_page(url, user)
+  File "/srv/ProfileScraper.py", line 51, in load_profile_page
+    2. Slow Internet: increase the timeout parameter in the Scraper constructor""")
+ValueError: Took too long to load profile.  Common problems/solutions:
+                1. Invalid LI_AT value: ensure that yours is correct (they
+                   update frequently)
+                2. Slow Internet: increase the timeout parameter in the Scraper constructor
+[10/Aug/2018:11:28:45] HTTP 
+Request Headers:
+  POSTMAN-TOKEN: 32ba1c98-3a93-4957-88dc-67c885fbe837
+  HOST: 35.178.24.189
+  ACCEPT-ENCODING: gzip, deflate
+  Content-Length: 68
+  CONNECTION: keep-alive
+  USER-AGENT: PostmanRuntime/7.2.0
+  ACCEPT: */*
+  Content-Type: application/json
+  Remote-Addr: 89.197.174.98
+  CACHE-CONTROL: no-cache
+[10/Aug/2018:11:29:16] ENGINE Keyboard Interrupt: shutting down bus
+[10/Aug/2018:11:29:16] ENGINE Bus STOPPING
+[10/Aug/2018:11:29:16] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('0.0.0.0', 80)) shut down
+[10/Aug/2018:11:29:16] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('127.0.0.1', 8080)) shut down
+[10/Aug/2018:11:29:16] ENGINE Stopped thread 'Autoreloader'.
+[10/Aug/2018:11:29:16] ENGINE Bus STOPPED
+[10/Aug/2018:11:29:16] ENGINE Bus EXITING
+[10/Aug/2018:11:29:16] ENGINE Bus EXITED
+[10/Aug/2018:11:29:16] ENGINE Waiting for child threads to terminate...
+[10/Aug/2018:14:26:15] ENGINE Listening for SIGHUP.
+[10/Aug/2018:14:26:15] ENGINE Listening for SIGTERM.
+[10/Aug/2018:14:26:15] ENGINE Listening for SIGUSR1.
+[10/Aug/2018:14:26:15] ENGINE Bus STARTING
+[10/Aug/2018:14:26:15] ENGINE Started monitor thread 'Autoreloader'.
+[10/Aug/2018:14:26:15] ENGINE Serving on http://0.0.0.0
+[10/Aug/2018:14:26:15] ENGINE Serving on http://127.0.0.1:8080
+[10/Aug/2018:14:26:15] ENGINE Bus STARTED
+[10/Aug/2018:14:26:19] HTTP 
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/cherrypy/_cprequest.py", line 627, in respond
+    self._do_respond(path_info)
+  File "/usr/local/lib/python3.5/dist-packages/cherrypy/_cprequest.py", line 686, in _do_respond
+    response.body = self.handler()
+  File "/usr/local/lib/python3.5/dist-packages/cherrypy/lib/encoding.py", line 221, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/usr/local/lib/python3.5/dist-packages/cherrypy/_cpdispatch.py", line 54, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "server.py", line 45, in default
+    with ProfileScraper(driver=driver) as scraper:
+  File "/srv/Scraper.py", line 45, in __init__
+    'Must either define LI_AT environment variable, or pass a cookie string to the Scraper')
+ValueError: Must either define LI_AT environment variable, or pass a cookie string to the Scraper
+[10/Aug/2018:14:26:19] HTTP 
+Request Headers:
+  HOST: 35.178.24.189
+  POSTMAN-TOKEN: b8b783fc-c831-4dca-8e18-b60bcb542bc6
+  Remote-Addr: 89.197.174.98
+  Content-Type: application/json
+  ACCEPT: */*
+  Content-Length: 59
+  CONNECTION: keep-alive
+  ACCEPT-ENCODING: gzip, deflate
+  CACHE-CONTROL: no-cache
+  USER-AGENT: PostmanRuntime/7.2.0
+[10/Aug/2018:14:28:09] ENGINE Keyboard Interrupt: shutting down bus
+[10/Aug/2018:14:28:09] ENGINE Bus STOPPING
+[10/Aug/2018:14:28:09] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('127.0.0.1', 8080)) shut down
+[10/Aug/2018:14:28:09] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('0.0.0.0', 80)) shut down
+[10/Aug/2018:14:28:09] ENGINE Stopped thread 'Autoreloader'.
+[10/Aug/2018:14:28:09] ENGINE Bus STOPPED
+[10/Aug/2018:14:28:09] ENGINE Bus EXITING
+[10/Aug/2018:14:28:09] ENGINE Bus EXITED
+[10/Aug/2018:14:28:09] ENGINE Waiting for child threads to terminate...
+[10/Aug/2018:14:28:16] ENGINE Listening for SIGHUP.
+[10/Aug/2018:14:28:16] ENGINE Listening for SIGTERM.
+[10/Aug/2018:14:28:16] ENGINE Listening for SIGUSR1.
+[10/Aug/2018:14:28:16] ENGINE Bus STARTING
+[10/Aug/2018:14:28:16] ENGINE Started monitor thread 'Autoreloader'.
+[10/Aug/2018:14:28:16] ENGINE Serving on http://0.0.0.0
+[10/Aug/2018:14:28:16] ENGINE Serving on http://127.0.0.1:8080
+[10/Aug/2018:14:28:16] ENGINE Bus STARTED
+[10/Aug/2018:14:28:19] HTTP 
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/cherrypy/_cprequest.py", line 627, in respond
+    self._do_respond(path_info)
+  File "/usr/local/lib/python3.5/dist-packages/cherrypy/_cprequest.py", line 686, in _do_respond
+    response.body = self.handler()
+  File "/usr/local/lib/python3.5/dist-packages/cherrypy/lib/encoding.py", line 221, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/usr/local/lib/python3.5/dist-packages/cherrypy/_cpdispatch.py", line 54, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "server.py", line 45, in default
+    with ProfileScraper(driver=driver,cookie=cookie) as scraper:
+UnboundLocalError: local variable 'cookie' referenced before assignment
+[10/Aug/2018:14:28:19] HTTP 
+Request Headers:
+  Remote-Addr: 89.197.174.98
+  CACHE-CONTROL: no-cache
+  ACCEPT-ENCODING: gzip, deflate
+  HOST: 35.178.24.189
+  POSTMAN-TOKEN: ed44715d-9dea-41a6-b15a-f1448ec6f29a
+  USER-AGENT: PostmanRuntime/7.2.0
+  CONNECTION: keep-alive
+  ACCEPT: */*
+  Content-Type: application/json
+  Content-Length: 59
+[10/Aug/2018:14:28:54] ENGINE Keyboard Interrupt: shutting down bus
+[10/Aug/2018:14:28:54] ENGINE Bus STOPPING
+[10/Aug/2018:14:28:54] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('127.0.0.1', 8080)) shut down
+[10/Aug/2018:14:28:54] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('0.0.0.0', 80)) shut down
+[10/Aug/2018:14:28:54] ENGINE Stopped thread 'Autoreloader'.
+[10/Aug/2018:14:28:54] ENGINE Bus STOPPED
+[10/Aug/2018:14:28:54] ENGINE Bus EXITING
+[10/Aug/2018:14:28:54] ENGINE Bus EXITED
+[10/Aug/2018:14:28:54] ENGINE Waiting for child threads to terminate...
+[10/Aug/2018:14:29:19] ENGINE Listening for SIGUSR1.
+[10/Aug/2018:14:29:19] ENGINE Listening for SIGHUP.
+[10/Aug/2018:14:29:19] ENGINE Listening for SIGTERM.
+[10/Aug/2018:14:29:19] ENGINE Bus STARTING
+[10/Aug/2018:14:29:19] ENGINE Started monitor thread 'Autoreloader'.
+[10/Aug/2018:14:29:19] ENGINE Serving on http://0.0.0.0
+[10/Aug/2018:14:29:19] ENGINE Serving on http://127.0.0.1:8080
+[10/Aug/2018:14:29:19] ENGINE Bus STARTED
+[10/Aug/2018:14:29:24] HTTP 
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/cherrypy/_cprequest.py", line 627, in respond
+    self._do_respond(path_info)
+  File "/usr/local/lib/python3.5/dist-packages/cherrypy/_cprequest.py", line 686, in _do_respond
+    response.body = self.handler()
+  File "/usr/local/lib/python3.5/dist-packages/cherrypy/lib/encoding.py", line 221, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/usr/local/lib/python3.5/dist-packages/cherrypy/_cpdispatch.py", line 54, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "server.py", line 46, in default
+    with ProfileScraper(driver=driver,cookie=cookie) as scraper:
+  File "/srv/Scraper.py", line 45, in __init__
+    'Must either define LI_AT environment variable, or pass a cookie string to the Scraper')
+ValueError: Must either define LI_AT environment variable, or pass a cookie string to the Scraper
+[10/Aug/2018:14:29:24] HTTP 
+Request Headers:
+  CACHE-CONTROL: no-cache
+  CONNECTION: keep-alive
+  ACCEPT: */*
+  Remote-Addr: 89.197.174.98
+  ACCEPT-ENCODING: gzip, deflate
+  Content-Length: 59
+  POSTMAN-TOKEN: 370230fb-5d77-4e02-9c4f-77d481da92cd
+  Content-Type: application/json
+  USER-AGENT: PostmanRuntime/7.2.0
+  HOST: 35.178.24.189
+[10/Aug/2018:14:30:35] ENGINE Keyboard Interrupt: shutting down bus
+[10/Aug/2018:14:30:35] ENGINE Bus STOPPING
+[10/Aug/2018:14:30:35] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('0.0.0.0', 80)) shut down
+[10/Aug/2018:14:30:35] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('127.0.0.1', 8080)) shut down
+[10/Aug/2018:14:30:35] ENGINE Stopped thread 'Autoreloader'.
+[10/Aug/2018:14:30:35] ENGINE Bus STOPPED
+[10/Aug/2018:14:30:35] ENGINE Bus EXITING
+[10/Aug/2018:14:30:35] ENGINE Bus EXITED
+[10/Aug/2018:14:30:35] ENGINE Waiting for child threads to terminate...
+[10/Aug/2018:14:30:59] ENGINE Listening for SIGHUP.
+[10/Aug/2018:14:30:59] ENGINE Listening for SIGTERM.
+[10/Aug/2018:14:30:59] ENGINE Listening for SIGUSR1.
+[10/Aug/2018:14:30:59] ENGINE Bus STARTING
+[10/Aug/2018:14:30:59] ENGINE Started monitor thread 'Autoreloader'.
+[10/Aug/2018:14:30:59] ENGINE Serving on http://0.0.0.0
+[10/Aug/2018:14:30:59] ENGINE Serving on http://127.0.0.1:8080
+[10/Aug/2018:14:30:59] ENGINE Bus STARTED
+[10/Aug/2018:14:31:01] HTTP 
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/cherrypy/_cprequest.py", line 627, in respond
+    self._do_respond(path_info)
+  File "/usr/local/lib/python3.5/dist-packages/cherrypy/_cprequest.py", line 686, in _do_respond
+    response.body = self.handler()
+  File "/usr/local/lib/python3.5/dist-packages/cherrypy/lib/encoding.py", line 221, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/usr/local/lib/python3.5/dist-packages/cherrypy/_cpdispatch.py", line 54, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "server.py", line 47, in default
+    with ProfileScraper(driver=driver,cookie=cookie) as scraper:
+  File "/srv/Scraper.py", line 45, in __init__
+    'Must either define LI_AT environment variable, or pass a cookie string to the Scraper')
+ValueError: Must either define LI_AT environment variable, or pass a cookie string to the Scraper
+[10/Aug/2018:14:31:01] HTTP 
+Request Headers:
+  CACHE-CONTROL: no-cache
+  HOST: 35.178.24.189
+  CONNECTION: keep-alive
+  ACCEPT-ENCODING: gzip, deflate
+  POSTMAN-TOKEN: aa17788b-f768-4b33-b80e-2ff18a7dfe45
+  Remote-Addr: 89.197.174.98
+  ACCEPT: */*
+  Content-Type: application/json
+  USER-AGENT: PostmanRuntime/7.2.0
+  Content-Length: 59
+[10/Aug/2018:14:34:54] ENGINE Keyboard Interrupt: shutting down bus
+[10/Aug/2018:14:34:54] ENGINE Bus STOPPING
+[10/Aug/2018:14:34:54] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('0.0.0.0', 80)) shut down
+[10/Aug/2018:14:34:54] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('127.0.0.1', 8080)) shut down
+[10/Aug/2018:14:34:54] ENGINE Stopped thread 'Autoreloader'.
+[10/Aug/2018:14:34:54] ENGINE Bus STOPPED
+[10/Aug/2018:14:34:54] ENGINE Bus EXITING
+[10/Aug/2018:14:34:54] ENGINE Bus EXITED
+[10/Aug/2018:14:34:54] ENGINE Waiting for child threads to terminate...
+[10/Aug/2018:14:35:05] ENGINE Listening for SIGTERM.
+[10/Aug/2018:14:35:05] ENGINE Listening for SIGUSR1.
+[10/Aug/2018:14:35:05] ENGINE Listening for SIGHUP.
+[10/Aug/2018:14:35:05] ENGINE Bus STARTING
+[10/Aug/2018:14:35:05] ENGINE Started monitor thread 'Autoreloader'.
+[10/Aug/2018:14:35:05] ENGINE Serving on http://0.0.0.0
+[10/Aug/2018:14:35:05] ENGINE Serving on http://127.0.0.1:8080
+[10/Aug/2018:14:35:05] ENGINE Bus STARTED
+[10/Aug/2018:14:35:16] HTTP 
+Request Headers:
+  Content-Type: application/json
+  CACHE-CONTROL: no-cache
+  ACCEPT-ENCODING: gzip, deflate
+  USER-AGENT: PostmanRuntime/7.2.0
+  HOST: 35.178.24.189
+  POSTMAN-TOKEN: 53c372bb-b2b3-4e61-8ea3-cdb86e8c3058
+  CONNECTION: keep-alive
+  Remote-Addr: 89.197.174.98
+  Content-Length: 59
+  ACCEPT: */*
+[10/Aug/2018:14:35:16] HTTP 
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/cherrypy/_cprequest.py", line 627, in respond
+    self._do_respond(path_info)
+  File "/usr/local/lib/python3.5/dist-packages/cherrypy/_cprequest.py", line 686, in _do_respond
+    response.body = self.handler()
+  File "/usr/local/lib/python3.5/dist-packages/cherrypy/_cprequest.py", line 803, in __set__
+    raise ValueError(self.unicode_err)
+ValueError: Page handlers MUST return bytes. Use tools.encode if you wish to return unicode.
+[10/Aug/2018:14:35:56] ENGINE Keyboard Interrupt: shutting down bus
+[10/Aug/2018:14:35:56] ENGINE Bus STOPPING
+[10/Aug/2018:14:35:56] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('127.0.0.1', 8080)) shut down
+[10/Aug/2018:14:35:56] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('0.0.0.0', 80)) shut down
+[10/Aug/2018:14:35:56] ENGINE Stopped thread 'Autoreloader'.
+[10/Aug/2018:14:35:56] ENGINE Bus STOPPED
+[10/Aug/2018:14:35:56] ENGINE Bus EXITING
+[10/Aug/2018:14:35:56] ENGINE Bus EXITED
+[10/Aug/2018:14:35:56] ENGINE Waiting for child threads to terminate...
+[10/Aug/2018:14:36:02] ENGINE Listening for SIGHUP.
+[10/Aug/2018:14:36:02] ENGINE Listening for SIGTERM.
+[10/Aug/2018:14:36:02] ENGINE Listening for SIGUSR1.
+[10/Aug/2018:14:36:02] ENGINE Bus STARTING
+[10/Aug/2018:14:36:02] ENGINE Started monitor thread 'Autoreloader'.
+[10/Aug/2018:14:36:02] ENGINE Serving on http://0.0.0.0
+[10/Aug/2018:14:36:02] ENGINE Serving on http://127.0.0.1:8080
+[10/Aug/2018:14:36:02] ENGINE Bus STARTED
+[10/Aug/2018:14:36:15] HTTP 
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/cherrypy/_cprequest.py", line 627, in respond
+    self._do_respond(path_info)
+  File "/usr/local/lib/python3.5/dist-packages/cherrypy/_cprequest.py", line 686, in _do_respond
+    response.body = self.handler()
+  File "/usr/local/lib/python3.5/dist-packages/cherrypy/_cprequest.py", line 803, in __set__
+    raise ValueError(self.unicode_err)
+ValueError: Page handlers MUST return bytes. Use tools.encode if you wish to return unicode.
+[10/Aug/2018:14:36:15] HTTP 
+Request Headers:
+  CACHE-CONTROL: no-cache
+  Content-Length: 59
+  POSTMAN-TOKEN: 2953aa2b-ced8-4a14-bce7-ffb7746bd54c
+  Remote-Addr: 89.197.174.98
+  ACCEPT-ENCODING: gzip, deflate
+  CONNECTION: keep-alive
+  ACCEPT: */*
+  USER-AGENT: PostmanRuntime/7.2.0
+  HOST: 35.178.24.189
+  Content-Type: application/json
+[10/Aug/2018:14:37:23] ENGINE Keyboard Interrupt: shutting down bus
+[10/Aug/2018:14:37:23] ENGINE Bus STOPPING
+[10/Aug/2018:14:37:23] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('0.0.0.0', 80)) shut down
+[10/Aug/2018:14:37:23] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('127.0.0.1', 8080)) shut down
+[10/Aug/2018:14:37:23] ENGINE Stopped thread 'Autoreloader'.
+[10/Aug/2018:14:37:23] ENGINE Bus STOPPED
+[10/Aug/2018:14:37:23] ENGINE Bus EXITING
+[10/Aug/2018:14:37:23] ENGINE Bus EXITED
+[10/Aug/2018:14:37:23] ENGINE Waiting for child threads to terminate...
+[10/Aug/2018:14:37:55] ENGINE Listening for SIGHUP.
+[10/Aug/2018:14:37:55] ENGINE Listening for SIGTERM.
+[10/Aug/2018:14:37:55] ENGINE Listening for SIGUSR1.
+[10/Aug/2018:14:37:55] ENGINE Bus STARTING
+[10/Aug/2018:14:37:55] ENGINE Started monitor thread 'Autoreloader'.
+[10/Aug/2018:14:37:55] ENGINE Serving on http://0.0.0.0
+[10/Aug/2018:14:37:55] ENGINE Serving on http://127.0.0.1:8080
+[10/Aug/2018:14:37:55] ENGINE Bus STARTED
+[10/Aug/2018:14:38:05] HTTP 
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/cherrypy/_cprequest.py", line 627, in respond
+    self._do_respond(path_info)
+  File "/usr/local/lib/python3.5/dist-packages/cherrypy/_cprequest.py", line 686, in _do_respond
+    response.body = self.handler()
+  File "/usr/local/lib/python3.5/dist-packages/cherrypy/_cprequest.py", line 803, in __set__
+    raise ValueError(self.unicode_err)
+ValueError: Page handlers MUST return bytes. Use tools.encode if you wish to return unicode.
+[10/Aug/2018:14:38:05] HTTP 
+Request Headers:
+  Remote-Addr: 89.197.174.98
+  ACCEPT-ENCODING: gzip, deflate
+  ACCEPT: */*
+  Content-Type: application/json
+  CACHE-CONTROL: no-cache
+  HOST: 35.178.24.189
+  Content-Length: 59
+  CONNECTION: keep-alive
+  USER-AGENT: PostmanRuntime/7.2.0
+  POSTMAN-TOKEN: 85d34c7d-f506-406d-b005-727e9fb8b0d6
+[10/Aug/2018:14:38:26] ENGINE Keyboard Interrupt: shutting down bus
+[10/Aug/2018:14:38:26] ENGINE Bus STOPPING
+[10/Aug/2018:14:38:26] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('0.0.0.0', 80)) shut down
+[10/Aug/2018:14:38:26] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('127.0.0.1', 8080)) shut down
+[10/Aug/2018:14:38:26] ENGINE Stopped thread 'Autoreloader'.
+[10/Aug/2018:14:38:26] ENGINE Bus STOPPED
+[10/Aug/2018:14:38:26] ENGINE Bus EXITING
+[10/Aug/2018:14:38:26] ENGINE Bus EXITED
+[10/Aug/2018:14:38:26] ENGINE Waiting for child threads to terminate...
+[10/Aug/2018:14:41:23] ENGINE Listening for SIGUSR1.
+[10/Aug/2018:14:41:23] ENGINE Listening for SIGTERM.
+[10/Aug/2018:14:41:23] ENGINE Listening for SIGHUP.
+[10/Aug/2018:14:41:23] ENGINE Bus STARTING
+[10/Aug/2018:14:41:23] ENGINE Started monitor thread 'Autoreloader'.
+[10/Aug/2018:14:41:23] ENGINE Serving on http://127.0.0.1:8080
+[10/Aug/2018:14:41:23] ENGINE Serving on http://0.0.0.0
+[10/Aug/2018:14:41:23] ENGINE Bus STARTED
+[10/Aug/2018:14:41:32] HTTP 
+Request Headers:
+  ACCEPT-ENCODING: gzip, deflate
+  Content-Length: 59
+  ACCEPT: */*
+  HOST: 35.178.24.189
+  Remote-Addr: 89.197.174.98
+  CONNECTION: keep-alive
+  Content-Type: application/json
+  CACHE-CONTROL: no-cache
+  USER-AGENT: PostmanRuntime/7.2.0
+  POSTMAN-TOKEN: 693c58a0-1fcc-4a8c-a468-ac5a6f7c4a1e
+[10/Aug/2018:14:41:32] HTTP 
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/cherrypy/_cprequest.py", line 627, in respond
+    self._do_respond(path_info)
+  File "/usr/local/lib/python3.5/dist-packages/cherrypy/_cprequest.py", line 686, in _do_respond
+    response.body = self.handler()
+  File "/usr/local/lib/python3.5/dist-packages/cherrypy/lib/encoding.py", line 221, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/usr/local/lib/python3.5/dist-packages/cherrypy/_cpdispatch.py", line 54, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "server.py", line 51, in default
+    print(results)
+NameError: name 'results' is not defined
+[10/Aug/2018:14:41:37] ENGINE Keyboard Interrupt: shutting down bus
+[10/Aug/2018:14:41:37] ENGINE Bus STOPPING
+[10/Aug/2018:14:41:37] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('127.0.0.1', 8080)) shut down
+[10/Aug/2018:14:41:37] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('0.0.0.0', 80)) shut down
+[10/Aug/2018:14:41:37] ENGINE Stopped thread 'Autoreloader'.
+[10/Aug/2018:14:41:37] ENGINE Bus STOPPED
+[10/Aug/2018:14:41:37] ENGINE Bus EXITING
+[10/Aug/2018:14:41:37] ENGINE Bus EXITED
+[10/Aug/2018:14:41:37] ENGINE Waiting for child threads to terminate...
+[10/Aug/2018:14:41:37] ENGINE Waiting for thread CP Server Thread-15.
+[10/Aug/2018:14:41:49] ENGINE Listening for SIGHUP.
+[10/Aug/2018:14:41:49] ENGINE Listening for SIGUSR1.
+[10/Aug/2018:14:41:49] ENGINE Listening for SIGTERM.
+[10/Aug/2018:14:41:49] ENGINE Bus STARTING
+[10/Aug/2018:14:41:49] ENGINE Started monitor thread 'Autoreloader'.
+[10/Aug/2018:14:41:49] ENGINE Serving on http://0.0.0.0
+[10/Aug/2018:14:41:49] ENGINE Serving on http://127.0.0.1:8080
+[10/Aug/2018:14:41:49] ENGINE Bus STARTED
+[10/Aug/2018:14:42:49] ENGINE Keyboard Interrupt: shutting down bus
+[10/Aug/2018:14:42:49] ENGINE Bus STOPPING
+[10/Aug/2018:14:42:49] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('0.0.0.0', 80)) shut down
+[10/Aug/2018:14:42:49] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('127.0.0.1', 8080)) shut down
+[10/Aug/2018:14:42:49] ENGINE Stopped thread 'Autoreloader'.
+[10/Aug/2018:14:42:49] ENGINE Bus STOPPED
+[10/Aug/2018:14:42:49] ENGINE Bus EXITING
+[10/Aug/2018:14:42:49] ENGINE Bus EXITED
+[10/Aug/2018:14:42:49] ENGINE Waiting for child threads to terminate...
+[13/Aug/2018:13:40:24] ENGINE Listening for SIGTERM.
+[13/Aug/2018:13:40:24] ENGINE Listening for SIGHUP.
+[13/Aug/2018:13:40:24] ENGINE Listening for SIGUSR1.
+[13/Aug/2018:13:40:24] ENGINE Bus STARTING
+[13/Aug/2018:13:40:24] ENGINE Started monitor thread 'Autoreloader'.
+[13/Aug/2018:13:40:24] ENGINE Serving on http://0.0.0.0
+[13/Aug/2018:13:40:24] ENGINE Serving on http://127.0.0.1:8080
+[13/Aug/2018:13:40:24] ENGINE Bus STARTED
+[13/Aug/2018:13:42:15] HTTP 
+Request Headers:
+  USER-AGENT: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.11; rv:47.0) Gecko/20100101 Firefox/47.0
+  HOST: 35.178.24.189:80
+  ACCEPT: */*
+  CONNECTION: keep-alive
+  Remote-Addr: 60.191.38.77
+[13/Aug/2018:13:42:15] HTTP 
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/cherrypy/_cprequest.py", line 627, in respond
+    self._do_respond(path_info)
+  File "/usr/local/lib/python3.5/dist-packages/cherrypy/_cprequest.py", line 686, in _do_respond
+    response.body = self.handler()
+  File "/usr/local/lib/python3.5/dist-packages/cherrypy/lib/encoding.py", line 221, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/usr/local/lib/python3.5/dist-packages/cherrypy/_cpdispatch.py", line 54, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "server.py", line 39, in default
+    body = cherrypy.request.body.read().decode()
+  File "/usr/local/lib/python3.5/dist-packages/cherrypy/_cpreqbody.py", line 475, in read
+    return self.fp.read(size, fp_out)
+TypeError: read() takes from 1 to 2 positional arguments but 3 were given
+[13/Aug/2018:13:50:05] HTTP 
+Request Headers:
+  USER-AGENT: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36
+  HOST: 35.178.24.189:80
+  Content-Length: 0
+  Remote-Addr: 50.82.7.248
+[13/Aug/2018:13:50:05] HTTP 
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/cherrypy/_cprequest.py", line 627, in respond
+    self._do_respond(path_info)
+  File "/usr/local/lib/python3.5/dist-packages/cherrypy/_cprequest.py", line 686, in _do_respond
+    response.body = self.handler()
+  File "/usr/local/lib/python3.5/dist-packages/cherrypy/lib/encoding.py", line 221, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/usr/local/lib/python3.5/dist-packages/cherrypy/_cpdispatch.py", line 54, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "server.py", line 39, in default
+    body = cherrypy.request.body.read().decode()
+  File "/usr/local/lib/python3.5/dist-packages/cherrypy/_cpreqbody.py", line 475, in read
+    return self.fp.read(size, fp_out)
+TypeError: read() takes from 1 to 2 positional arguments but 3 were given
+[13/Aug/2018:14:01:35] HTTP 
+Request Headers:
+  CACHE-CONTROL: no-cache
+  Content-Type: application/json
+  USER-AGENT: PostmanRuntime/7.2.0
+  ACCEPT-ENCODING: gzip, deflate
+  CONNECTION: keep-alive
+  HOST: 35.178.24.189
+  ACCEPT: */*
+  POSTMAN-TOKEN: a93f612e-5dc5-4af8-a5a0-9f9f0f9ae7f8
+  Content-Length: 212
+  Remote-Addr: 89.197.174.98
+[13/Aug/2018:14:01:35] HTTP 
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 137, in _new_conn
+    (self.host, self.port), self.timeout, **extra_kw)
+  File "/usr/lib/python3/dist-packages/urllib3/util/connection.py", line 91, in create_connection
+    raise err
+  File "/usr/lib/python3/dist-packages/urllib3/util/connection.py", line 81, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 560, in urlopen
+    body=body, headers=headers)
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 354, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/usr/lib/python3.5/http/client.py", line 1106, in request
+    self._send_request(method, url, body, headers)
+  File "/usr/lib/python3.5/http/client.py", line 1151, in _send_request
+    self.endheaders(body)
+  File "/usr/lib/python3.5/http/client.py", line 1102, in endheaders
+    self._send_output(message_body)
+  File "/usr/lib/python3.5/http/client.py", line 934, in _send_output
+    self.send(msg)
+  File "/usr/lib/python3.5/http/client.py", line 877, in send
+    self.connect()
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 162, in connect
+    conn = self._new_conn()
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 146, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7f0b1c71aba8>: Failed to establish a new connection: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/cherrypy/_cprequest.py", line 627, in respond
+    self._do_respond(path_info)
+  File "/usr/local/lib/python3.5/dist-packages/cherrypy/_cprequest.py", line 686, in _do_respond
+    response.body = self.handler()
+  File "/usr/local/lib/python3.5/dist-packages/cherrypy/lib/encoding.py", line 221, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/usr/local/lib/python3.5/dist-packages/cherrypy/_cpdispatch.py", line 54, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "server.py", line 46, in default
+    with ProfileScraper(driver=driver,cookie=cookie) as scraper:
+  File "/srv/Scraper.py", line 51, in __init__
+    self.driver.get('http://www.linkedin.com')
+  File "/usr/local/lib/python3.5/dist-packages/selenium/webdriver/remote/webdriver.py", line 332, in get
+    self.execute(Command.GET, {'url': url})
+  File "/usr/local/lib/python3.5/dist-packages/selenium/webdriver/remote/webdriver.py", line 318, in execute
+    response = self.command_executor.execute(driver_command, params)
+  File "/usr/local/lib/python3.5/dist-packages/selenium/webdriver/remote/remote_connection.py", line 375, in execute
+    return self._request(command_info[0], url, body=data)
+  File "/usr/local/lib/python3.5/dist-packages/selenium/webdriver/remote/remote_connection.py", line 397, in _request
+    resp = self._conn.request(method, url, body=body, headers=headers)
+  File "/usr/lib/python3/dist-packages/urllib3/request.py", line 73, in request
+    **urlopen_kw)
+  File "/usr/lib/python3/dist-packages/urllib3/request.py", line 151, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+  File "/usr/lib/python3/dist-packages/urllib3/poolmanager.py", line 162, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 630, in urlopen
+    release_conn=release_conn, **response_kw)
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 630, in urlopen
+    release_conn=release_conn, **response_kw)
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 630, in urlopen
+    release_conn=release_conn, **response_kw)
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 610, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "/usr/lib/python3/dist-packages/urllib3/util/retry.py", line 273, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='127.0.0.1', port=55766): Max retries exceeded with url: /session/23d99eff9fdd774a03723aab80201d7b/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f0b1c71aba8>: Failed to establish a new connection: [Errno 111] Connection refused',))
+[13/Aug/2018:14:02:01] HTTP 
+Request Headers:
+  CACHE-CONTROL: no-cache
+  Content-Type: application/json
+  USER-AGENT: PostmanRuntime/7.2.0
+  ACCEPT-ENCODING: gzip, deflate
+  CONNECTION: keep-alive
+  HOST: 35.178.24.189
+  ACCEPT: */*
+  POSTMAN-TOKEN: 019f86a8-f248-4e9e-bb7a-d5a3671138fa
+  Content-Length: 212
+  Remote-Addr: 89.197.174.98
+[13/Aug/2018:14:02:01] HTTP 
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 137, in _new_conn
+    (self.host, self.port), self.timeout, **extra_kw)
+  File "/usr/lib/python3/dist-packages/urllib3/util/connection.py", line 91, in create_connection
+    raise err
+  File "/usr/lib/python3/dist-packages/urllib3/util/connection.py", line 81, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 560, in urlopen
+    body=body, headers=headers)
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 354, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/usr/lib/python3.5/http/client.py", line 1106, in request
+    self._send_request(method, url, body, headers)
+  File "/usr/lib/python3.5/http/client.py", line 1151, in _send_request
+    self.endheaders(body)
+  File "/usr/lib/python3.5/http/client.py", line 1102, in endheaders
+    self._send_output(message_body)
+  File "/usr/lib/python3.5/http/client.py", line 934, in _send_output
+    self.send(msg)
+  File "/usr/lib/python3.5/http/client.py", line 877, in send
+    self.connect()
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 162, in connect
+    conn = self._new_conn()
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 146, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7f0b1c6ea6d8>: Failed to establish a new connection: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/cherrypy/_cprequest.py", line 627, in respond
+    self._do_respond(path_info)
+  File "/usr/local/lib/python3.5/dist-packages/cherrypy/_cprequest.py", line 686, in _do_respond
+    response.body = self.handler()
+  File "/usr/local/lib/python3.5/dist-packages/cherrypy/lib/encoding.py", line 221, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/usr/local/lib/python3.5/dist-packages/cherrypy/_cpdispatch.py", line 54, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "server.py", line 46, in default
+    with ProfileScraper(driver=driver,cookie=cookie) as scraper:
+  File "/srv/Scraper.py", line 51, in __init__
+    self.driver.get('http://www.linkedin.com')
+  File "/usr/local/lib/python3.5/dist-packages/selenium/webdriver/remote/webdriver.py", line 332, in get
+    self.execute(Command.GET, {'url': url})
+  File "/usr/local/lib/python3.5/dist-packages/selenium/webdriver/remote/webdriver.py", line 318, in execute
+    response = self.command_executor.execute(driver_command, params)
+  File "/usr/local/lib/python3.5/dist-packages/selenium/webdriver/remote/remote_connection.py", line 375, in execute
+    return self._request(command_info[0], url, body=data)
+  File "/usr/local/lib/python3.5/dist-packages/selenium/webdriver/remote/remote_connection.py", line 397, in _request
+    resp = self._conn.request(method, url, body=body, headers=headers)
+  File "/usr/lib/python3/dist-packages/urllib3/request.py", line 73, in request
+    **urlopen_kw)
+  File "/usr/lib/python3/dist-packages/urllib3/request.py", line 151, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+  File "/usr/lib/python3/dist-packages/urllib3/poolmanager.py", line 162, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 630, in urlopen
+    release_conn=release_conn, **response_kw)
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 630, in urlopen
+    release_conn=release_conn, **response_kw)
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 630, in urlopen
+    release_conn=release_conn, **response_kw)
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 610, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "/usr/lib/python3/dist-packages/urllib3/util/retry.py", line 273, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='127.0.0.1', port=55766): Max retries exceeded with url: /session/23d99eff9fdd774a03723aab80201d7b/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f0b1c6ea6d8>: Failed to establish a new connection: [Errno 111] Connection refused',))
+[13/Aug/2018:14:02:32] ENGINE Keyboard Interrupt: shutting down bus
+[13/Aug/2018:14:02:32] ENGINE Bus STOPPING
+[13/Aug/2018:14:02:32] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('0.0.0.0', 80)) shut down
+[13/Aug/2018:14:02:32] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('127.0.0.1', 8080)) shut down
+[13/Aug/2018:14:02:32] ENGINE Stopped thread 'Autoreloader'.
+[13/Aug/2018:14:02:32] ENGINE Bus STOPPED
+[13/Aug/2018:14:02:32] ENGINE Bus EXITING
+[13/Aug/2018:14:02:32] ENGINE Bus EXITED
+[13/Aug/2018:14:02:32] ENGINE Waiting for child threads to terminate...
+[13/Aug/2018:14:02:39] ENGINE Listening for SIGTERM.
+[13/Aug/2018:14:02:40] ENGINE Listening for SIGUSR1.
+[13/Aug/2018:14:02:40] ENGINE Listening for SIGHUP.
+[13/Aug/2018:14:02:40] ENGINE Bus STARTING
+[13/Aug/2018:14:02:40] ENGINE Started monitor thread 'Autoreloader'.
+[13/Aug/2018:14:02:40] ENGINE Serving on http://0.0.0.0
+[13/Aug/2018:14:02:40] ENGINE Serving on http://127.0.0.1:8080
+[13/Aug/2018:14:02:40] ENGINE Bus STARTED
+[13/Aug/2018:14:15:46] HTTP 
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 137, in _new_conn
+    (self.host, self.port), self.timeout, **extra_kw)
+  File "/usr/lib/python3/dist-packages/urllib3/util/connection.py", line 91, in create_connection
+    raise err
+  File "/usr/lib/python3/dist-packages/urllib3/util/connection.py", line 81, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 560, in urlopen
+    body=body, headers=headers)
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 354, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/usr/lib/python3.5/http/client.py", line 1106, in request
+    self._send_request(method, url, body, headers)
+  File "/usr/lib/python3.5/http/client.py", line 1151, in _send_request
+    self.endheaders(body)
+  File "/usr/lib/python3.5/http/client.py", line 1102, in endheaders
+    self._send_output(message_body)
+  File "/usr/lib/python3.5/http/client.py", line 934, in _send_output
+    self.send(msg)
+  File "/usr/lib/python3.5/http/client.py", line 877, in send
+    self.connect()
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 162, in connect
+    conn = self._new_conn()
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 146, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7faf79793ba8>: Failed to establish a new connection: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/cherrypy/_cprequest.py", line 627, in respond
+    self._do_respond(path_info)
+  File "/usr/local/lib/python3.5/dist-packages/cherrypy/_cprequest.py", line 686, in _do_respond
+    response.body = self.handler()
+  File "/usr/local/lib/python3.5/dist-packages/cherrypy/lib/encoding.py", line 221, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/usr/local/lib/python3.5/dist-packages/cherrypy/_cpdispatch.py", line 54, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "server.py", line 46, in default
+    with ProfileScraper(driver=driver,cookie=cookie) as scraper:
+  File "/srv/Scraper.py", line 51, in __init__
+    self.driver.get('http://www.linkedin.com')
+  File "/usr/local/lib/python3.5/dist-packages/selenium/webdriver/remote/webdriver.py", line 332, in get
+    self.execute(Command.GET, {'url': url})
+  File "/usr/local/lib/python3.5/dist-packages/selenium/webdriver/remote/webdriver.py", line 318, in execute
+    response = self.command_executor.execute(driver_command, params)
+  File "/usr/local/lib/python3.5/dist-packages/selenium/webdriver/remote/remote_connection.py", line 375, in execute
+    return self._request(command_info[0], url, body=data)
+  File "/usr/local/lib/python3.5/dist-packages/selenium/webdriver/remote/remote_connection.py", line 397, in _request
+    resp = self._conn.request(method, url, body=body, headers=headers)
+  File "/usr/lib/python3/dist-packages/urllib3/request.py", line 73, in request
+    **urlopen_kw)
+  File "/usr/lib/python3/dist-packages/urllib3/request.py", line 151, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+  File "/usr/lib/python3/dist-packages/urllib3/poolmanager.py", line 162, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 630, in urlopen
+    release_conn=release_conn, **response_kw)
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 630, in urlopen
+    release_conn=release_conn, **response_kw)
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 630, in urlopen
+    release_conn=release_conn, **response_kw)
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 610, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "/usr/lib/python3/dist-packages/urllib3/util/retry.py", line 273, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='127.0.0.1', port=56933): Max retries exceeded with url: /session/4b26d143cc19e49b807f1ed6d495ff06/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7faf79793ba8>: Failed to establish a new connection: [Errno 111] Connection refused',))
+[13/Aug/2018:14:15:46] HTTP 
+Request Headers:
+  Content-Type: application/json
+  USER-AGENT: PostmanRuntime/7.2.0
+  CONNECTION: keep-alive
+  Remote-Addr: 89.197.174.98
+  ACCEPT-ENCODING: gzip, deflate
+  Content-Length: 212
+  HOST: 35.178.24.189
+  POSTMAN-TOKEN: 11534775-6532-43d8-bfb5-42dfbf7c76e0
+  CACHE-CONTROL: no-cache
+  ACCEPT: */*
+[13/Aug/2018:14:20:01] ENGINE Keyboard Interrupt: shutting down bus
+[13/Aug/2018:14:20:01] ENGINE Bus STOPPING
+[13/Aug/2018:14:20:01] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('0.0.0.0', 80)) shut down
+[13/Aug/2018:14:20:01] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('127.0.0.1', 8080)) shut down
+[13/Aug/2018:14:20:01] ENGINE Stopped thread 'Autoreloader'.
+[13/Aug/2018:14:20:01] ENGINE Bus STOPPED
+[13/Aug/2018:14:20:01] ENGINE Bus EXITING
+[13/Aug/2018:14:20:01] ENGINE Bus EXITED
+[13/Aug/2018:14:20:01] ENGINE Waiting for child threads to terminate...
+[13/Aug/2018:14:22:36] ENGINE Listening for SIGTERM.
+[13/Aug/2018:14:22:36] ENGINE Listening for SIGHUP.
+[13/Aug/2018:14:22:36] ENGINE Listening for SIGUSR1.
+[13/Aug/2018:14:22:36] ENGINE Bus STARTING
+[13/Aug/2018:14:22:36] ENGINE Started monitor thread 'Autoreloader'.
+[13/Aug/2018:14:22:36] ENGINE Serving on http://0.0.0.0
+[13/Aug/2018:14:22:36] ENGINE Serving on http://127.0.0.1:8080
+[13/Aug/2018:14:22:36] ENGINE Bus STARTED
+[13/Aug/2018:14:22:57] HTTP 
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 137, in _new_conn
+    (self.host, self.port), self.timeout, **extra_kw)
+  File "/usr/lib/python3/dist-packages/urllib3/util/connection.py", line 91, in create_connection
+    raise err
+  File "/usr/lib/python3/dist-packages/urllib3/util/connection.py", line 81, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 560, in urlopen
+    body=body, headers=headers)
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 354, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/usr/lib/python3.5/http/client.py", line 1106, in request
+    self._send_request(method, url, body, headers)
+  File "/usr/lib/python3.5/http/client.py", line 1151, in _send_request
+    self.endheaders(body)
+  File "/usr/lib/python3.5/http/client.py", line 1102, in endheaders
+    self._send_output(message_body)
+  File "/usr/lib/python3.5/http/client.py", line 934, in _send_output
+    self.send(msg)
+  File "/usr/lib/python3.5/http/client.py", line 877, in send
+    self.connect()
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 162, in connect
+    conn = self._new_conn()
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 146, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7f82103a0358>: Failed to establish a new connection: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/cherrypy/_cprequest.py", line 627, in respond
+    self._do_respond(path_info)
+  File "/usr/local/lib/python3.5/dist-packages/cherrypy/_cprequest.py", line 686, in _do_respond
+    response.body = self.handler()
+  File "/usr/local/lib/python3.5/dist-packages/cherrypy/lib/encoding.py", line 221, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/usr/local/lib/python3.5/dist-packages/cherrypy/_cpdispatch.py", line 54, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "server.py", line 53, in default
+    closeDriver()
+  File "server.py", line 20, in closeDriver
+    driver.close()
+  File "/usr/local/lib/python3.5/dist-packages/selenium/webdriver/remote/webdriver.py", line 687, in close
+    self.execute(Command.CLOSE)
+  File "/usr/local/lib/python3.5/dist-packages/selenium/webdriver/remote/webdriver.py", line 318, in execute
+    response = self.command_executor.execute(driver_command, params)
+  File "/usr/local/lib/python3.5/dist-packages/selenium/webdriver/remote/remote_connection.py", line 375, in execute
+    return self._request(command_info[0], url, body=data)
+  File "/usr/local/lib/python3.5/dist-packages/selenium/webdriver/remote/remote_connection.py", line 397, in _request
+    resp = self._conn.request(method, url, body=body, headers=headers)
+  File "/usr/lib/python3/dist-packages/urllib3/request.py", line 69, in request
+    **urlopen_kw)
+  File "/usr/lib/python3/dist-packages/urllib3/request.py", line 90, in request_encode_url
+    return self.urlopen(method, url, **extra_kw)
+  File "/usr/lib/python3/dist-packages/urllib3/poolmanager.py", line 162, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 630, in urlopen
+    release_conn=release_conn, **response_kw)
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 630, in urlopen
+    release_conn=release_conn, **response_kw)
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 630, in urlopen
+    release_conn=release_conn, **response_kw)
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 610, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "/usr/lib/python3/dist-packages/urllib3/util/retry.py", line 273, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='127.0.0.1', port=60431): Max retries exceeded with url: /session/cc5c9a5f59afe4aa16cbe50b190bc50f/window (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f82103a0358>: Failed to establish a new connection: [Errno 111] Connection refused',))
+[13/Aug/2018:14:22:57] HTTP 
+Request Headers:
+  Remote-Addr: 89.197.174.98
+  CACHE-CONTROL: no-cache
+  ACCEPT: */*
+  POSTMAN-TOKEN: 21c4a9de-d2e9-4dd3-90e0-e8c4e9c2bea5
+  USER-AGENT: PostmanRuntime/7.2.0
+  CONNECTION: keep-alive
+  Content-Type: application/json
+  Content-Length: 212
+  ACCEPT-ENCODING: gzip, deflate
+  HOST: 35.178.24.189
+[13/Aug/2018:14:23:50] HTTP 
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 137, in _new_conn
+    (self.host, self.port), self.timeout, **extra_kw)
+  File "/usr/lib/python3/dist-packages/urllib3/util/connection.py", line 91, in create_connection
+    raise err
+  File "/usr/lib/python3/dist-packages/urllib3/util/connection.py", line 81, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 560, in urlopen
+    body=body, headers=headers)
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 354, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/usr/lib/python3.5/http/client.py", line 1106, in request
+    self._send_request(method, url, body, headers)
+  File "/usr/lib/python3.5/http/client.py", line 1151, in _send_request
+    self.endheaders(body)
+  File "/usr/lib/python3.5/http/client.py", line 1102, in endheaders
+    self._send_output(message_body)
+  File "/usr/lib/python3.5/http/client.py", line 934, in _send_output
+    self.send(msg)
+  File "/usr/lib/python3.5/http/client.py", line 877, in send
+    self.connect()
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 162, in connect
+    conn = self._new_conn()
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 146, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7f821020c128>: Failed to establish a new connection: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/cherrypy/_cprequest.py", line 627, in respond
+    self._do_respond(path_info)
+  File "/usr/local/lib/python3.5/dist-packages/cherrypy/_cprequest.py", line 686, in _do_respond
+    response.body = self.handler()
+  File "/usr/local/lib/python3.5/dist-packages/cherrypy/lib/encoding.py", line 221, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/usr/local/lib/python3.5/dist-packages/cherrypy/_cpdispatch.py", line 54, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "server.py", line 53, in default
+    closeDriver()
+  File "server.py", line 20, in closeDriver
+    driver.close()
+  File "/usr/local/lib/python3.5/dist-packages/selenium/webdriver/remote/webdriver.py", line 687, in close
+    self.execute(Command.CLOSE)
+  File "/usr/local/lib/python3.5/dist-packages/selenium/webdriver/remote/webdriver.py", line 318, in execute
+    response = self.command_executor.execute(driver_command, params)
+  File "/usr/local/lib/python3.5/dist-packages/selenium/webdriver/remote/remote_connection.py", line 375, in execute
+    return self._request(command_info[0], url, body=data)
+  File "/usr/local/lib/python3.5/dist-packages/selenium/webdriver/remote/remote_connection.py", line 397, in _request
+    resp = self._conn.request(method, url, body=body, headers=headers)
+  File "/usr/lib/python3/dist-packages/urllib3/request.py", line 69, in request
+    **urlopen_kw)
+  File "/usr/lib/python3/dist-packages/urllib3/request.py", line 90, in request_encode_url
+    return self.urlopen(method, url, **extra_kw)
+  File "/usr/lib/python3/dist-packages/urllib3/poolmanager.py", line 162, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 630, in urlopen
+    release_conn=release_conn, **response_kw)
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 630, in urlopen
+    release_conn=release_conn, **response_kw)
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 630, in urlopen
+    release_conn=release_conn, **response_kw)
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 610, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "/usr/lib/python3/dist-packages/urllib3/util/retry.py", line 273, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='127.0.0.1', port=52391): Max retries exceeded with url: /session/2260a3519576f11d2c2694a2bee85bf7/window (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f821020c128>: Failed to establish a new connection: [Errno 111] Connection refused',))
+[13/Aug/2018:14:23:50] HTTP 
+Request Headers:
+  Remote-Addr: 89.197.174.98
+  CACHE-CONTROL: no-cache
+  ACCEPT: */*
+  POSTMAN-TOKEN: 20d91f40-3c4b-475b-a864-736f8d533130
+  USER-AGENT: PostmanRuntime/7.2.0
+  CONNECTION: keep-alive
+  Content-Type: application/json
+  Content-Length: 51
+  ACCEPT-ENCODING: gzip, deflate
+  HOST: 35.178.24.189
+[13/Aug/2018:14:24:35] HTTP 
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/cherrypy/_cprequest.py", line 627, in respond
+    self._do_respond(path_info)
+  File "/usr/local/lib/python3.5/dist-packages/cherrypy/_cprequest.py", line 686, in _do_respond
+    response.body = self.handler()
+  File "/usr/local/lib/python3.5/dist-packages/cherrypy/lib/encoding.py", line 221, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/usr/local/lib/python3.5/dist-packages/cherrypy/_cpdispatch.py", line 54, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "server.py", line 49, in default
+    profile = scraper.scrape(url=params['url'])
+  File "/srv/ProfileScraper.py", line 21, in scrape
+    self.load_profile_page(url, user)
+  File "/srv/ProfileScraper.py", line 38, in load_profile_page
+    self.driver.get(url)
+  File "/usr/local/lib/python3.5/dist-packages/selenium/webdriver/remote/webdriver.py", line 332, in get
+    self.execute(Command.GET, {'url': url})
+  File "/usr/local/lib/python3.5/dist-packages/selenium/webdriver/remote/webdriver.py", line 320, in execute
+    self.error_handler.check_response(response)
+  File "/usr/local/lib/python3.5/dist-packages/selenium/webdriver/remote/errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.WebDriverException: Message: unknown error: unhandled inspector error: {"code":-32000,"message":"Cannot navigate to invalid URL"}
+  (Session info: headless chrome=68.0.3440.84)
+  (Driver info: chromedriver=2.41.578700 (2f1ed5f9343c13f73144538f15c00b370eda6706),platform=Linux 4.4.0-1061-aws x86_64)
+
+[13/Aug/2018:14:24:35] HTTP 
+Request Headers:
+  Remote-Addr: 89.197.174.98
+  CACHE-CONTROL: no-cache
+  ACCEPT: */*
+  POSTMAN-TOKEN: 4758661a-c915-4c85-9c00-299d2bdf95de
+  USER-AGENT: PostmanRuntime/7.2.0
+  CONNECTION: keep-alive
+  Content-Type: application/json
+  Content-Length: 43
+  ACCEPT-ENCODING: gzip, deflate
+  HOST: 35.178.24.189
+[13/Aug/2018:14:25:06] HTTP 
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 137, in _new_conn
+    (self.host, self.port), self.timeout, **extra_kw)
+  File "/usr/lib/python3/dist-packages/urllib3/util/connection.py", line 91, in create_connection
+    raise err
+  File "/usr/lib/python3/dist-packages/urllib3/util/connection.py", line 81, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 560, in urlopen
+    body=body, headers=headers)
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 354, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/usr/lib/python3.5/http/client.py", line 1106, in request
+    self._send_request(method, url, body, headers)
+  File "/usr/lib/python3.5/http/client.py", line 1151, in _send_request
+    self.endheaders(body)
+  File "/usr/lib/python3.5/http/client.py", line 1102, in endheaders
+    self._send_output(message_body)
+  File "/usr/lib/python3.5/http/client.py", line 934, in _send_output
+    self.send(msg)
+  File "/usr/lib/python3.5/http/client.py", line 877, in send
+    self.connect()
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 162, in connect
+    conn = self._new_conn()
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 146, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7f82100bb668>: Failed to establish a new connection: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/cherrypy/_cprequest.py", line 627, in respond
+    self._do_respond(path_info)
+  File "/usr/local/lib/python3.5/dist-packages/cherrypy/_cprequest.py", line 686, in _do_respond
+    response.body = self.handler()
+  File "/usr/local/lib/python3.5/dist-packages/cherrypy/lib/encoding.py", line 221, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/usr/local/lib/python3.5/dist-packages/cherrypy/_cpdispatch.py", line 54, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "server.py", line 53, in default
+    closeDriver()
+  File "server.py", line 20, in closeDriver
+    driver.close()
+  File "/usr/local/lib/python3.5/dist-packages/selenium/webdriver/remote/webdriver.py", line 687, in close
+    self.execute(Command.CLOSE)
+  File "/usr/local/lib/python3.5/dist-packages/selenium/webdriver/remote/webdriver.py", line 318, in execute
+    response = self.command_executor.execute(driver_command, params)
+  File "/usr/local/lib/python3.5/dist-packages/selenium/webdriver/remote/remote_connection.py", line 375, in execute
+    return self._request(command_info[0], url, body=data)
+  File "/usr/local/lib/python3.5/dist-packages/selenium/webdriver/remote/remote_connection.py", line 397, in _request
+    resp = self._conn.request(method, url, body=body, headers=headers)
+  File "/usr/lib/python3/dist-packages/urllib3/request.py", line 69, in request
+    **urlopen_kw)
+  File "/usr/lib/python3/dist-packages/urllib3/request.py", line 90, in request_encode_url
+    return self.urlopen(method, url, **extra_kw)
+  File "/usr/lib/python3/dist-packages/urllib3/poolmanager.py", line 162, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 630, in urlopen
+    release_conn=release_conn, **response_kw)
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 630, in urlopen
+    release_conn=release_conn, **response_kw)
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 630, in urlopen
+    release_conn=release_conn, **response_kw)
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 610, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "/usr/lib/python3/dist-packages/urllib3/util/retry.py", line 273, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='127.0.0.1', port=50853): Max retries exceeded with url: /session/4095fb9e3f4c98f4d5f5697678e62243/window (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f82100bb668>: Failed to establish a new connection: [Errno 111] Connection refused',))
+[13/Aug/2018:14:25:06] HTTP 
+Request Headers:
+  Remote-Addr: 89.197.174.98
+  CACHE-CONTROL: no-cache
+  ACCEPT: */*
+  POSTMAN-TOKEN: dd3a2507-2830-4023-9a9e-6ea854a75d4f
+  USER-AGENT: PostmanRuntime/7.2.0
+  CONNECTION: keep-alive
+  Content-Type: application/json
+  Content-Length: 50
+  ACCEPT-ENCODING: gzip, deflate
+  HOST: 35.178.24.189
+[13/Aug/2018:14:25:15] ENGINE Keyboard Interrupt: shutting down bus
+[13/Aug/2018:14:25:15] ENGINE Bus STOPPING
+[13/Aug/2018:14:25:16] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('0.0.0.0', 80)) shut down
+[13/Aug/2018:14:25:16] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('127.0.0.1', 8080)) shut down
+[13/Aug/2018:14:25:16] ENGINE Stopped thread 'Autoreloader'.
+[13/Aug/2018:14:25:16] ENGINE Bus STOPPED
+[13/Aug/2018:14:25:16] ENGINE Bus EXITING
+[13/Aug/2018:14:25:16] ENGINE Bus EXITED
+[13/Aug/2018:14:25:16] ENGINE Waiting for child threads to terminate...
+[13/Aug/2018:14:27:08] ENGINE Listening for SIGHUP.
+[13/Aug/2018:14:27:08] ENGINE Listening for SIGTERM.
+[13/Aug/2018:14:27:08] ENGINE Listening for SIGUSR1.
+[13/Aug/2018:14:27:08] ENGINE Bus STARTING
+[13/Aug/2018:14:27:08] ENGINE Started monitor thread 'Autoreloader'.
+[13/Aug/2018:14:27:08] ENGINE Serving on http://127.0.0.1:8080
+[13/Aug/2018:14:27:09] ENGINE Serving on http://0.0.0.0
+[13/Aug/2018:14:27:09] ENGINE Bus STARTED
+[13/Aug/2018:14:27:31] HTTP 
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 137, in _new_conn
+    (self.host, self.port), self.timeout, **extra_kw)
+  File "/usr/lib/python3/dist-packages/urllib3/util/connection.py", line 91, in create_connection
+    raise err
+  File "/usr/lib/python3/dist-packages/urllib3/util/connection.py", line 81, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 560, in urlopen
+    body=body, headers=headers)
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 354, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/usr/lib/python3.5/http/client.py", line 1106, in request
+    self._send_request(method, url, body, headers)
+  File "/usr/lib/python3.5/http/client.py", line 1151, in _send_request
+    self.endheaders(body)
+  File "/usr/lib/python3.5/http/client.py", line 1102, in endheaders
+    self._send_output(message_body)
+  File "/usr/lib/python3.5/http/client.py", line 934, in _send_output
+    self.send(msg)
+  File "/usr/lib/python3.5/http/client.py", line 877, in send
+    self.connect()
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 162, in connect
+    conn = self._new_conn()
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 146, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7f929474d898>: Failed to establish a new connection: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/cherrypy/_cprequest.py", line 627, in respond
+    self._do_respond(path_info)
+  File "/usr/local/lib/python3.5/dist-packages/cherrypy/_cprequest.py", line 686, in _do_respond
+    response.body = self.handler()
+  File "/usr/local/lib/python3.5/dist-packages/cherrypy/lib/encoding.py", line 221, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/usr/local/lib/python3.5/dist-packages/cherrypy/_cpdispatch.py", line 54, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "server.py", line 53, in default
+    closeDriver()
+  File "server.py", line 20, in closeDriver
+    driver.close()
+  File "/usr/local/lib/python3.5/dist-packages/selenium/webdriver/remote/webdriver.py", line 687, in close
+    self.execute(Command.CLOSE)
+  File "/usr/local/lib/python3.5/dist-packages/selenium/webdriver/remote/webdriver.py", line 318, in execute
+    response = self.command_executor.execute(driver_command, params)
+  File "/usr/local/lib/python3.5/dist-packages/selenium/webdriver/remote/remote_connection.py", line 375, in execute
+    return self._request(command_info[0], url, body=data)
+  File "/usr/local/lib/python3.5/dist-packages/selenium/webdriver/remote/remote_connection.py", line 397, in _request
+    resp = self._conn.request(method, url, body=body, headers=headers)
+  File "/usr/lib/python3/dist-packages/urllib3/request.py", line 69, in request
+    **urlopen_kw)
+  File "/usr/lib/python3/dist-packages/urllib3/request.py", line 90, in request_encode_url
+    return self.urlopen(method, url, **extra_kw)
+  File "/usr/lib/python3/dist-packages/urllib3/poolmanager.py", line 162, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 630, in urlopen
+    release_conn=release_conn, **response_kw)
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 630, in urlopen
+    release_conn=release_conn, **response_kw)
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 630, in urlopen
+    release_conn=release_conn, **response_kw)
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 610, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "/usr/lib/python3/dist-packages/urllib3/util/retry.py", line 273, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='127.0.0.1', port=42484): Max retries exceeded with url: /session/2c7e8804fecca4efdeab575e1cec21cd/window (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f929474d898>: Failed to establish a new connection: [Errno 111] Connection refused',))
+[13/Aug/2018:14:27:31] HTTP 
+Request Headers:
+  HOST: 35.178.24.189
+  ACCEPT: */*
+  Content-Length: 50
+  POSTMAN-TOKEN: 271c9496-da01-4a03-97f4-d6ea0eed0b15
+  ACCEPT-ENCODING: gzip, deflate
+  CACHE-CONTROL: no-cache
+  Remote-Addr: 89.197.174.98
+  USER-AGENT: PostmanRuntime/7.2.0
+  CONNECTION: keep-alive
+  Content-Type: application/json
+[13/Aug/2018:14:29:07] HTTP 
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 137, in _new_conn
+    (self.host, self.port), self.timeout, **extra_kw)
+  File "/usr/lib/python3/dist-packages/urllib3/util/connection.py", line 91, in create_connection
+    raise err
+  File "/usr/lib/python3/dist-packages/urllib3/util/connection.py", line 81, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 560, in urlopen
+    body=body, headers=headers)
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 354, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/usr/lib/python3.5/http/client.py", line 1106, in request
+    self._send_request(method, url, body, headers)
+  File "/usr/lib/python3.5/http/client.py", line 1151, in _send_request
+    self.endheaders(body)
+  File "/usr/lib/python3.5/http/client.py", line 1102, in endheaders
+    self._send_output(message_body)
+  File "/usr/lib/python3.5/http/client.py", line 934, in _send_output
+    self.send(msg)
+  File "/usr/lib/python3.5/http/client.py", line 877, in send
+    self.connect()
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 162, in connect
+    conn = self._new_conn()
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 146, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7f929450b128>: Failed to establish a new connection: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/cherrypy/_cprequest.py", line 627, in respond
+    self._do_respond(path_info)
+  File "/usr/local/lib/python3.5/dist-packages/cherrypy/_cprequest.py", line 686, in _do_respond
+    response.body = self.handler()
+  File "/usr/local/lib/python3.5/dist-packages/cherrypy/lib/encoding.py", line 221, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/usr/local/lib/python3.5/dist-packages/cherrypy/_cpdispatch.py", line 54, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "server.py", line 53, in default
+    closeDriver()
+  File "server.py", line 20, in closeDriver
+    driver.close()
+  File "/usr/local/lib/python3.5/dist-packages/selenium/webdriver/remote/webdriver.py", line 687, in close
+    self.execute(Command.CLOSE)
+  File "/usr/local/lib/python3.5/dist-packages/selenium/webdriver/remote/webdriver.py", line 318, in execute
+    response = self.command_executor.execute(driver_command, params)
+  File "/usr/local/lib/python3.5/dist-packages/selenium/webdriver/remote/remote_connection.py", line 375, in execute
+    return self._request(command_info[0], url, body=data)
+  File "/usr/local/lib/python3.5/dist-packages/selenium/webdriver/remote/remote_connection.py", line 397, in _request
+    resp = self._conn.request(method, url, body=body, headers=headers)
+  File "/usr/lib/python3/dist-packages/urllib3/request.py", line 69, in request
+    **urlopen_kw)
+  File "/usr/lib/python3/dist-packages/urllib3/request.py", line 90, in request_encode_url
+    return self.urlopen(method, url, **extra_kw)
+  File "/usr/lib/python3/dist-packages/urllib3/poolmanager.py", line 162, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 630, in urlopen
+    release_conn=release_conn, **response_kw)
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 630, in urlopen
+    release_conn=release_conn, **response_kw)
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 630, in urlopen
+    release_conn=release_conn, **response_kw)
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 610, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "/usr/lib/python3/dist-packages/urllib3/util/retry.py", line 273, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='127.0.0.1', port=44164): Max retries exceeded with url: /session/56b8542b625d99ea654f23e5e7fba241/window (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f929450b128>: Failed to establish a new connection: [Errno 111] Connection refused',))
+[13/Aug/2018:14:29:07] HTTP 
+Request Headers:
+  HOST: 35.178.24.189
+  ACCEPT: */*
+  Content-Length: 211
+  POSTMAN-TOKEN: ecd8e83b-6948-4868-a2d2-ded8f473087a
+  ACCEPT-ENCODING: gzip, deflate
+  CACHE-CONTROL: no-cache
+  Remote-Addr: 89.197.174.98
+  USER-AGENT: PostmanRuntime/7.2.0
+  CONNECTION: keep-alive
+  Content-Type: application/json
+[13/Aug/2018:14:30:51] HTTP 
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 137, in _new_conn
+    (self.host, self.port), self.timeout, **extra_kw)
+  File "/usr/lib/python3/dist-packages/urllib3/util/connection.py", line 91, in create_connection
+    raise err
+  File "/usr/lib/python3/dist-packages/urllib3/util/connection.py", line 81, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 560, in urlopen
+    body=body, headers=headers)
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 354, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/usr/lib/python3.5/http/client.py", line 1106, in request
+    self._send_request(method, url, body, headers)
+  File "/usr/lib/python3.5/http/client.py", line 1151, in _send_request
+    self.endheaders(body)
+  File "/usr/lib/python3.5/http/client.py", line 1102, in endheaders
+    self._send_output(message_body)
+  File "/usr/lib/python3.5/http/client.py", line 934, in _send_output
+    self.send(msg)
+  File "/usr/lib/python3.5/http/client.py", line 877, in send
+    self.connect()
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 162, in connect
+    conn = self._new_conn()
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 146, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7f929439bd68>: Failed to establish a new connection: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/cherrypy/_cprequest.py", line 627, in respond
+    self._do_respond(path_info)
+  File "/usr/local/lib/python3.5/dist-packages/cherrypy/_cprequest.py", line 686, in _do_respond
+    response.body = self.handler()
+  File "/usr/local/lib/python3.5/dist-packages/cherrypy/lib/encoding.py", line 221, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/usr/local/lib/python3.5/dist-packages/cherrypy/_cpdispatch.py", line 54, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "server.py", line 53, in default
+    closeDriver()
+  File "server.py", line 20, in closeDriver
+    driver.close()
+  File "/usr/local/lib/python3.5/dist-packages/selenium/webdriver/remote/webdriver.py", line 687, in close
+    self.execute(Command.CLOSE)
+  File "/usr/local/lib/python3.5/dist-packages/selenium/webdriver/remote/webdriver.py", line 318, in execute
+    response = self.command_executor.execute(driver_command, params)
+  File "/usr/local/lib/python3.5/dist-packages/selenium/webdriver/remote/remote_connection.py", line 375, in execute
+    return self._request(command_info[0], url, body=data)
+  File "/usr/local/lib/python3.5/dist-packages/selenium/webdriver/remote/remote_connection.py", line 397, in _request
+    resp = self._conn.request(method, url, body=body, headers=headers)
+  File "/usr/lib/python3/dist-packages/urllib3/request.py", line 69, in request
+    **urlopen_kw)
+  File "/usr/lib/python3/dist-packages/urllib3/request.py", line 90, in request_encode_url
+    return self.urlopen(method, url, **extra_kw)
+  File "/usr/lib/python3/dist-packages/urllib3/poolmanager.py", line 162, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 630, in urlopen
+    release_conn=release_conn, **response_kw)
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 630, in urlopen
+    release_conn=release_conn, **response_kw)
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 630, in urlopen
+    release_conn=release_conn, **response_kw)
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 610, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "/usr/lib/python3/dist-packages/urllib3/util/retry.py", line 273, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='127.0.0.1', port=42937): Max retries exceeded with url: /session/ee60cf0eda0fe170d1ef3488656ab973/window (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f929439bd68>: Failed to establish a new connection: [Errno 111] Connection refused',))
+[13/Aug/2018:14:30:51] HTTP 
+Request Headers:
+  HOST: 35.178.24.189
+  ACCEPT: */*
+  Content-Length: 211
+  POSTMAN-TOKEN: a5bb998d-a42f-43b4-9550-4531807780ab
+  ACCEPT-ENCODING: gzip, deflate
+  CACHE-CONTROL: no-cache
+  Remote-Addr: 89.197.174.98
+  USER-AGENT: PostmanRuntime/7.2.0
+  CONNECTION: keep-alive
+  Content-Type: application/json
+[13/Aug/2018:14:42:17] HTTP 
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/cherrypy/_cprequest.py", line 627, in respond
+    self._do_respond(path_info)
+  File "/usr/local/lib/python3.5/dist-packages/cherrypy/_cprequest.py", line 686, in _do_respond
+    response.body = self.handler()
+  File "/usr/local/lib/python3.5/dist-packages/cherrypy/lib/encoding.py", line 221, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/usr/local/lib/python3.5/dist-packages/cherrypy/_cpdispatch.py", line 54, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "server.py", line 41, in default
+    body = cherrypy.request.body.read().decode()
+  File "/usr/local/lib/python3.5/dist-packages/cherrypy/_cpreqbody.py", line 475, in read
+    return self.fp.read(size, fp_out)
+TypeError: read() takes from 1 to 2 positional arguments but 3 were given
+[13/Aug/2018:14:42:17] HTTP 
+Request Headers:
+  HOST: 35.178.24.189:80
+  Content-Length: 0
+  USER-AGENT: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/601.7.7 (KHTML, like Gecko) Version/9.1.2 Safari/601.7.7
+  Remote-Addr: 187.34.3.115
+[13/Aug/2018:15:03:19] HTTP 
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 137, in _new_conn
+    (self.host, self.port), self.timeout, **extra_kw)
+  File "/usr/lib/python3/dist-packages/urllib3/util/connection.py", line 91, in create_connection
+    raise err
+  File "/usr/lib/python3/dist-packages/urllib3/util/connection.py", line 81, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 560, in urlopen
+    body=body, headers=headers)
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 354, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/usr/lib/python3.5/http/client.py", line 1106, in request
+    self._send_request(method, url, body, headers)
+  File "/usr/lib/python3.5/http/client.py", line 1151, in _send_request
+    self.endheaders(body)
+  File "/usr/lib/python3.5/http/client.py", line 1102, in endheaders
+    self._send_output(message_body)
+  File "/usr/lib/python3.5/http/client.py", line 934, in _send_output
+    self.send(msg)
+  File "/usr/lib/python3.5/http/client.py", line 877, in send
+    self.connect()
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 162, in connect
+    conn = self._new_conn()
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 146, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7f92941e6e80>: Failed to establish a new connection: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/cherrypy/_cprequest.py", line 627, in respond
+    self._do_respond(path_info)
+  File "/usr/local/lib/python3.5/dist-packages/cherrypy/_cprequest.py", line 686, in _do_respond
+    response.body = self.handler()
+  File "/usr/local/lib/python3.5/dist-packages/cherrypy/lib/encoding.py", line 221, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/usr/local/lib/python3.5/dist-packages/cherrypy/_cpdispatch.py", line 54, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "server.py", line 53, in default
+    closeDriver()
+  File "server.py", line 20, in closeDriver
+    driver.close()
+  File "/usr/local/lib/python3.5/dist-packages/selenium/webdriver/remote/webdriver.py", line 687, in close
+    self.execute(Command.CLOSE)
+  File "/usr/local/lib/python3.5/dist-packages/selenium/webdriver/remote/webdriver.py", line 318, in execute
+    response = self.command_executor.execute(driver_command, params)
+  File "/usr/local/lib/python3.5/dist-packages/selenium/webdriver/remote/remote_connection.py", line 375, in execute
+    return self._request(command_info[0], url, body=data)
+  File "/usr/local/lib/python3.5/dist-packages/selenium/webdriver/remote/remote_connection.py", line 397, in _request
+    resp = self._conn.request(method, url, body=body, headers=headers)
+  File "/usr/lib/python3/dist-packages/urllib3/request.py", line 69, in request
+    **urlopen_kw)
+  File "/usr/lib/python3/dist-packages/urllib3/request.py", line 90, in request_encode_url
+    return self.urlopen(method, url, **extra_kw)
+  File "/usr/lib/python3/dist-packages/urllib3/poolmanager.py", line 162, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 630, in urlopen
+    release_conn=release_conn, **response_kw)
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 630, in urlopen
+    release_conn=release_conn, **response_kw)
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 630, in urlopen
+    release_conn=release_conn, **response_kw)
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 610, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "/usr/lib/python3/dist-packages/urllib3/util/retry.py", line 273, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='127.0.0.1', port=57039): Max retries exceeded with url: /session/66729ea08bec146bc93d0b6cfe8c009d/window (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f92941e6e80>: Failed to establish a new connection: [Errno 111] Connection refused',))
+[13/Aug/2018:15:03:19] HTTP 
+Request Headers:
+  HOST: 35.178.24.189
+  ACCEPT: */*
+  Content-Length: 211
+  POSTMAN-TOKEN: c2312669-f738-4438-bc38-749acdaaf403
+  ACCEPT-ENCODING: gzip, deflate
+  CACHE-CONTROL: no-cache
+  Remote-Addr: 89.197.174.98
+  USER-AGENT: PostmanRuntime/7.2.0
+  CONNECTION: keep-alive
+  Content-Type: application/json
+[13/Aug/2018:15:03:26] ENGINE Keyboard Interrupt: shutting down bus
+[13/Aug/2018:15:03:26] ENGINE Bus STOPPING
+[13/Aug/2018:15:03:26] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('0.0.0.0', 80)) shut down
+[13/Aug/2018:15:03:26] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('127.0.0.1', 8080)) shut down
+[13/Aug/2018:15:03:26] ENGINE Stopped thread 'Autoreloader'.
+[13/Aug/2018:15:03:26] ENGINE Bus STOPPED
+[13/Aug/2018:15:03:26] ENGINE Bus EXITING
+[13/Aug/2018:15:03:26] ENGINE Bus EXITED
+[13/Aug/2018:15:03:26] ENGINE Waiting for child threads to terminate...
+[13/Aug/2018:15:03:26] ENGINE Waiting for thread CP Server Thread-21.
+[13/Aug/2018:15:03:31] ENGINE Listening for SIGUSR1.
+[13/Aug/2018:15:03:31] ENGINE Listening for SIGTERM.
+[13/Aug/2018:15:03:31] ENGINE Listening for SIGHUP.
+[13/Aug/2018:15:03:31] ENGINE Bus STARTING
+[13/Aug/2018:15:03:31] ENGINE Started monitor thread 'Autoreloader'.
+[13/Aug/2018:15:03:31] ENGINE Serving on http://127.0.0.1:8080
+[13/Aug/2018:15:03:31] ENGINE Serving on http://0.0.0.0
+[13/Aug/2018:15:03:31] ENGINE Bus STARTED
+[13/Aug/2018:15:03:50] HTTP 
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 137, in _new_conn
+    (self.host, self.port), self.timeout, **extra_kw)
+  File "/usr/lib/python3/dist-packages/urllib3/util/connection.py", line 91, in create_connection
+    raise err
+  File "/usr/lib/python3/dist-packages/urllib3/util/connection.py", line 81, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 560, in urlopen
+    body=body, headers=headers)
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 354, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/usr/lib/python3.5/http/client.py", line 1106, in request
+    self._send_request(method, url, body, headers)
+  File "/usr/lib/python3.5/http/client.py", line 1151, in _send_request
+    self.endheaders(body)
+  File "/usr/lib/python3.5/http/client.py", line 1102, in endheaders
+    self._send_output(message_body)
+  File "/usr/lib/python3.5/http/client.py", line 934, in _send_output
+    self.send(msg)
+  File "/usr/lib/python3.5/http/client.py", line 877, in send
+    self.connect()
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 162, in connect
+    conn = self._new_conn()
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 146, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7fb53c64e9e8>: Failed to establish a new connection: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/cherrypy/_cprequest.py", line 627, in respond
+    self._do_respond(path_info)
+  File "/usr/local/lib/python3.5/dist-packages/cherrypy/_cprequest.py", line 686, in _do_respond
+    response.body = self.handler()
+  File "/usr/local/lib/python3.5/dist-packages/cherrypy/lib/encoding.py", line 221, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/usr/local/lib/python3.5/dist-packages/cherrypy/_cpdispatch.py", line 54, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "server.py", line 53, in default
+    closeDriver()
+  File "server.py", line 20, in closeDriver
+    driver.close()
+  File "/usr/local/lib/python3.5/dist-packages/selenium/webdriver/remote/webdriver.py", line 687, in close
+    self.execute(Command.CLOSE)
+  File "/usr/local/lib/python3.5/dist-packages/selenium/webdriver/remote/webdriver.py", line 318, in execute
+    response = self.command_executor.execute(driver_command, params)
+  File "/usr/local/lib/python3.5/dist-packages/selenium/webdriver/remote/remote_connection.py", line 375, in execute
+    return self._request(command_info[0], url, body=data)
+  File "/usr/local/lib/python3.5/dist-packages/selenium/webdriver/remote/remote_connection.py", line 397, in _request
+    resp = self._conn.request(method, url, body=body, headers=headers)
+  File "/usr/lib/python3/dist-packages/urllib3/request.py", line 69, in request
+    **urlopen_kw)
+  File "/usr/lib/python3/dist-packages/urllib3/request.py", line 90, in request_encode_url
+    return self.urlopen(method, url, **extra_kw)
+  File "/usr/lib/python3/dist-packages/urllib3/poolmanager.py", line 162, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 630, in urlopen
+    release_conn=release_conn, **response_kw)
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 630, in urlopen
+    release_conn=release_conn, **response_kw)
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 630, in urlopen
+    release_conn=release_conn, **response_kw)
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 610, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "/usr/lib/python3/dist-packages/urllib3/util/retry.py", line 273, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='127.0.0.1', port=50432): Max retries exceeded with url: /session/7209bd63b05cbf0ff627803a4ca22710/window (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fb53c64e9e8>: Failed to establish a new connection: [Errno 111] Connection refused',))
+[13/Aug/2018:15:03:50] HTTP 
+Request Headers:
+  USER-AGENT: PostmanRuntime/7.2.0
+  ACCEPT-ENCODING: gzip, deflate
+  Content-Length: 211
+  HOST: 35.178.24.189
+  Remote-Addr: 89.197.174.98
+  CONNECTION: keep-alive
+  POSTMAN-TOKEN: b31abb89-3c0a-4bc9-9cba-f7ea42d83288
+  ACCEPT: */*
+  CACHE-CONTROL: no-cache
+  Content-Type: application/json
+[13/Aug/2018:15:04:55] HTTP 
+Traceback (most recent call last):
+  File "/srv/ProfileScraper.py", line 45, in load_profile_page
+    (By.CSS_SELECTOR, '.profile-unavailable'))
+  File "/usr/local/lib/python3.5/dist-packages/selenium/webdriver/support/wait.py", line 80, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/cherrypy/_cprequest.py", line 627, in respond
+    self._do_respond(path_info)
+  File "/usr/local/lib/python3.5/dist-packages/cherrypy/_cprequest.py", line 686, in _do_respond
+    response.body = self.handler()
+  File "/usr/local/lib/python3.5/dist-packages/cherrypy/lib/encoding.py", line 221, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/usr/local/lib/python3.5/dist-packages/cherrypy/_cpdispatch.py", line 54, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "server.py", line 49, in default
+    profile = scraper.scrape(url=params['url'])
+  File "/srv/ProfileScraper.py", line 21, in scrape
+    self.load_profile_page(url, user)
+  File "/srv/ProfileScraper.py", line 52, in load_profile_page
+    2. Slow Internet: increase the timeout parameter in the Scraper constructor""")
+ValueError: Took too long to load profile.  Common problems/solutions:
+                1. Invalid LI_AT value: ensure that yours is correct (they
+                   update frequently)
+                2. Slow Internet: increase the timeout parameter in the Scraper constructor
+[13/Aug/2018:15:04:55] HTTP 
+Request Headers:
+  USER-AGENT: PostmanRuntime/7.2.0
+  ACCEPT-ENCODING: gzip, deflate
+  Content-Length: 212
+  HOST: 35.178.24.189
+  Remote-Addr: 89.197.174.98
+  CONNECTION: keep-alive
+  POSTMAN-TOKEN: bb016bcc-b661-4700-8834-59e98405e38d
+  ACCEPT: */*
+  CACHE-CONTROL: no-cache
+  Content-Type: application/json
+[13/Aug/2018:15:06:07] HTTP 
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 137, in _new_conn
+    (self.host, self.port), self.timeout, **extra_kw)
+  File "/usr/lib/python3/dist-packages/urllib3/util/connection.py", line 91, in create_connection
+    raise err
+  File "/usr/lib/python3/dist-packages/urllib3/util/connection.py", line 81, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 560, in urlopen
+    body=body, headers=headers)
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 354, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/usr/lib/python3.5/http/client.py", line 1106, in request
+    self._send_request(method, url, body, headers)
+  File "/usr/lib/python3.5/http/client.py", line 1151, in _send_request
+    self.endheaders(body)
+  File "/usr/lib/python3.5/http/client.py", line 1102, in endheaders
+    self._send_output(message_body)
+  File "/usr/lib/python3.5/http/client.py", line 934, in _send_output
+    self.send(msg)
+  File "/usr/lib/python3.5/http/client.py", line 877, in send
+    self.connect()
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 162, in connect
+    conn = self._new_conn()
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 146, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7fb53c29ff98>: Failed to establish a new connection: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/cherrypy/_cprequest.py", line 627, in respond
+    self._do_respond(path_info)
+  File "/usr/local/lib/python3.5/dist-packages/cherrypy/_cprequest.py", line 686, in _do_respond
+    response.body = self.handler()
+  File "/usr/local/lib/python3.5/dist-packages/cherrypy/lib/encoding.py", line 221, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/usr/local/lib/python3.5/dist-packages/cherrypy/_cpdispatch.py", line 54, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "server.py", line 53, in default
+    closeDriver()
+  File "server.py", line 20, in closeDriver
+    driver.close()
+  File "/usr/local/lib/python3.5/dist-packages/selenium/webdriver/remote/webdriver.py", line 687, in close
+    self.execute(Command.CLOSE)
+  File "/usr/local/lib/python3.5/dist-packages/selenium/webdriver/remote/webdriver.py", line 318, in execute
+    response = self.command_executor.execute(driver_command, params)
+  File "/usr/local/lib/python3.5/dist-packages/selenium/webdriver/remote/remote_connection.py", line 375, in execute
+    return self._request(command_info[0], url, body=data)
+  File "/usr/local/lib/python3.5/dist-packages/selenium/webdriver/remote/remote_connection.py", line 397, in _request
+    resp = self._conn.request(method, url, body=body, headers=headers)
+  File "/usr/lib/python3/dist-packages/urllib3/request.py", line 69, in request
+    **urlopen_kw)
+  File "/usr/lib/python3/dist-packages/urllib3/request.py", line 90, in request_encode_url
+    return self.urlopen(method, url, **extra_kw)
+  File "/usr/lib/python3/dist-packages/urllib3/poolmanager.py", line 162, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 630, in urlopen
+    release_conn=release_conn, **response_kw)
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 630, in urlopen
+    release_conn=release_conn, **response_kw)
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 630, in urlopen
+    release_conn=release_conn, **response_kw)
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 610, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "/usr/lib/python3/dist-packages/urllib3/util/retry.py", line 273, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='127.0.0.1', port=54809): Max retries exceeded with url: /session/0e4b77a3a0a00fa4f5e2d5f592f76173/window (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fb53c29ff98>: Failed to establish a new connection: [Errno 111] Connection refused',))
+[13/Aug/2018:15:06:07] HTTP 
+Request Headers:
+  USER-AGENT: PostmanRuntime/7.2.0
+  ACCEPT-ENCODING: gzip, deflate
+  Content-Length: 212
+  HOST: 35.178.24.189
+  Remote-Addr: 89.197.174.98
+  CONNECTION: keep-alive
+  POSTMAN-TOKEN: 6409a426-4896-4893-8397-5721d2488bbd
+  ACCEPT: */*
+  CACHE-CONTROL: no-cache
+  Content-Type: application/json
+[13/Aug/2018:15:06:27] ENGINE Keyboard Interrupt: shutting down bus
+[13/Aug/2018:15:06:27] ENGINE Bus STOPPING
+[13/Aug/2018:15:06:27] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('127.0.0.1', 8080)) shut down
+[13/Aug/2018:15:06:27] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('0.0.0.0', 80)) shut down
+[13/Aug/2018:15:06:27] ENGINE Stopped thread 'Autoreloader'.
+[13/Aug/2018:15:06:27] ENGINE Bus STOPPED
+[13/Aug/2018:15:06:27] ENGINE Bus EXITING
+[13/Aug/2018:15:06:27] ENGINE Bus EXITED
+[13/Aug/2018:15:06:27] ENGINE Waiting for child threads to terminate...
+[13/Aug/2018:15:06:59] ENGINE Listening for SIGTERM.
+[13/Aug/2018:15:06:59] ENGINE Listening for SIGUSR1.
+[13/Aug/2018:15:06:59] ENGINE Listening for SIGHUP.
+[13/Aug/2018:15:06:59] ENGINE Bus STARTING
+[13/Aug/2018:15:06:59] ENGINE Started monitor thread 'Autoreloader'.
+[13/Aug/2018:15:06:59] ENGINE Serving on http://127.0.0.1:8080
+[13/Aug/2018:15:06:59] ENGINE Serving on http://0.0.0.0
+[13/Aug/2018:15:06:59] ENGINE Bus STARTED
+[13/Aug/2018:15:07:20] HTTP 
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 137, in _new_conn
+    (self.host, self.port), self.timeout, **extra_kw)
+  File "/usr/lib/python3/dist-packages/urllib3/util/connection.py", line 91, in create_connection
+    raise err
+  File "/usr/lib/python3/dist-packages/urllib3/util/connection.py", line 81, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 560, in urlopen
+    body=body, headers=headers)
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 354, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/usr/lib/python3.5/http/client.py", line 1106, in request
+    self._send_request(method, url, body, headers)
+  File "/usr/lib/python3.5/http/client.py", line 1151, in _send_request
+    self.endheaders(body)
+  File "/usr/lib/python3.5/http/client.py", line 1102, in endheaders
+    self._send_output(message_body)
+  File "/usr/lib/python3.5/http/client.py", line 934, in _send_output
+    self.send(msg)
+  File "/usr/lib/python3.5/http/client.py", line 877, in send
+    self.connect()
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 162, in connect
+    conn = self._new_conn()
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 146, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7f5718228cf8>: Failed to establish a new connection: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/cherrypy/_cprequest.py", line 627, in respond
+    self._do_respond(path_info)
+  File "/usr/local/lib/python3.5/dist-packages/cherrypy/_cprequest.py", line 686, in _do_respond
+    response.body = self.handler()
+  File "/usr/local/lib/python3.5/dist-packages/cherrypy/lib/encoding.py", line 221, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/usr/local/lib/python3.5/dist-packages/cherrypy/_cpdispatch.py", line 54, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "server.py", line 54, in default
+    closeDriver()
+  File "server.py", line 20, in closeDriver
+    driver.close()
+  File "/usr/local/lib/python3.5/dist-packages/selenium/webdriver/remote/webdriver.py", line 687, in close
+    self.execute(Command.CLOSE)
+  File "/usr/local/lib/python3.5/dist-packages/selenium/webdriver/remote/webdriver.py", line 318, in execute
+    response = self.command_executor.execute(driver_command, params)
+  File "/usr/local/lib/python3.5/dist-packages/selenium/webdriver/remote/remote_connection.py", line 375, in execute
+    return self._request(command_info[0], url, body=data)
+  File "/usr/local/lib/python3.5/dist-packages/selenium/webdriver/remote/remote_connection.py", line 397, in _request
+    resp = self._conn.request(method, url, body=body, headers=headers)
+  File "/usr/lib/python3/dist-packages/urllib3/request.py", line 69, in request
+    **urlopen_kw)
+  File "/usr/lib/python3/dist-packages/urllib3/request.py", line 90, in request_encode_url
+    return self.urlopen(method, url, **extra_kw)
+  File "/usr/lib/python3/dist-packages/urllib3/poolmanager.py", line 162, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 630, in urlopen
+    release_conn=release_conn, **response_kw)
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 630, in urlopen
+    release_conn=release_conn, **response_kw)
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 630, in urlopen
+    release_conn=release_conn, **response_kw)
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 610, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "/usr/lib/python3/dist-packages/urllib3/util/retry.py", line 273, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='127.0.0.1', port=41072): Max retries exceeded with url: /session/fd382d508a991569ea6a14e43d722c28/window (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f5718228cf8>: Failed to establish a new connection: [Errno 111] Connection refused',))
+[13/Aug/2018:15:07:20] HTTP 
+Request Headers:
+  Remote-Addr: 89.197.174.98
+  USER-AGENT: PostmanRuntime/7.2.0
+  ACCEPT: */*
+  ACCEPT-ENCODING: gzip, deflate
+  HOST: 35.178.24.189
+  Content-Length: 212
+  POSTMAN-TOKEN: ffd64e87-a006-4f0d-ac6c-737335b3b767
+  CONNECTION: keep-alive
+  CACHE-CONTROL: no-cache
+  Content-Type: application/json
+[13/Aug/2018:15:07:29] ENGINE Keyboard Interrupt: shutting down bus
+[13/Aug/2018:15:07:29] ENGINE Bus STOPPING
+[13/Aug/2018:15:07:29] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('127.0.0.1', 8080)) shut down
+[13/Aug/2018:15:07:30] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('0.0.0.0', 80)) shut down
+[13/Aug/2018:15:07:30] ENGINE Stopped thread 'Autoreloader'.
+[13/Aug/2018:15:07:30] ENGINE Bus STOPPED
+[13/Aug/2018:15:07:30] ENGINE Bus EXITING
+[13/Aug/2018:15:07:30] ENGINE Bus EXITED
+[13/Aug/2018:15:07:30] ENGINE Waiting for child threads to terminate...
+[13/Aug/2018:15:07:30] ENGINE Waiting for thread CP Server Thread-15.
+[13/Aug/2018:15:07:58] ENGINE Listening for SIGUSR1.
+[13/Aug/2018:15:07:58] ENGINE Listening for SIGTERM.
+[13/Aug/2018:15:07:58] ENGINE Listening for SIGHUP.
+[13/Aug/2018:15:07:58] ENGINE Bus STARTING
+[13/Aug/2018:15:07:58] ENGINE Started monitor thread 'Autoreloader'.
+[13/Aug/2018:15:07:58] ENGINE Serving on http://0.0.0.0
+[13/Aug/2018:15:07:58] ENGINE Serving on http://127.0.0.1:8080
+[13/Aug/2018:15:07:58] ENGINE Bus STARTED
+[13/Aug/2018:15:08:17] HTTP 
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 137, in _new_conn
+    (self.host, self.port), self.timeout, **extra_kw)
+  File "/usr/lib/python3/dist-packages/urllib3/util/connection.py", line 91, in create_connection
+    raise err
+  File "/usr/lib/python3/dist-packages/urllib3/util/connection.py", line 81, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 560, in urlopen
+    body=body, headers=headers)
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 354, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/usr/lib/python3.5/http/client.py", line 1106, in request
+    self._send_request(method, url, body, headers)
+  File "/usr/lib/python3.5/http/client.py", line 1151, in _send_request
+    self.endheaders(body)
+  File "/usr/lib/python3.5/http/client.py", line 1102, in endheaders
+    self._send_output(message_body)
+  File "/usr/lib/python3.5/http/client.py", line 934, in _send_output
+    self.send(msg)
+  File "/usr/lib/python3.5/http/client.py", line 877, in send
+    self.connect()
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 162, in connect
+    conn = self._new_conn()
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 146, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7f24d802e898>: Failed to establish a new connection: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/cherrypy/_cprequest.py", line 627, in respond
+    self._do_respond(path_info)
+  File "/usr/local/lib/python3.5/dist-packages/cherrypy/_cprequest.py", line 686, in _do_respond
+    response.body = self.handler()
+  File "/usr/local/lib/python3.5/dist-packages/cherrypy/lib/encoding.py", line 221, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/usr/local/lib/python3.5/dist-packages/cherrypy/_cpdispatch.py", line 54, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "server.py", line 54, in default
+    closeDriver()
+  File "server.py", line 20, in closeDriver
+    driver.close()
+  File "/usr/local/lib/python3.5/dist-packages/selenium/webdriver/remote/webdriver.py", line 687, in close
+    self.execute(Command.CLOSE)
+  File "/usr/local/lib/python3.5/dist-packages/selenium/webdriver/remote/webdriver.py", line 318, in execute
+    response = self.command_executor.execute(driver_command, params)
+  File "/usr/local/lib/python3.5/dist-packages/selenium/webdriver/remote/remote_connection.py", line 375, in execute
+    return self._request(command_info[0], url, body=data)
+  File "/usr/local/lib/python3.5/dist-packages/selenium/webdriver/remote/remote_connection.py", line 397, in _request
+    resp = self._conn.request(method, url, body=body, headers=headers)
+  File "/usr/lib/python3/dist-packages/urllib3/request.py", line 69, in request
+    **urlopen_kw)
+  File "/usr/lib/python3/dist-packages/urllib3/request.py", line 90, in request_encode_url
+    return self.urlopen(method, url, **extra_kw)
+  File "/usr/lib/python3/dist-packages/urllib3/poolmanager.py", line 162, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 630, in urlopen
+    release_conn=release_conn, **response_kw)
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 630, in urlopen
+    release_conn=release_conn, **response_kw)
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 630, in urlopen
+    release_conn=release_conn, **response_kw)
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 610, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "/usr/lib/python3/dist-packages/urllib3/util/retry.py", line 273, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='127.0.0.1', port=45181): Max retries exceeded with url: /session/8e1a45739799bdb4d0881294791b450d/window (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f24d802e898>: Failed to establish a new connection: [Errno 111] Connection refused',))
+[13/Aug/2018:15:08:17] HTTP 
+Request Headers:
+  Remote-Addr: 89.197.174.98
+  Content-Type: application/json
+  ACCEPT-ENCODING: gzip, deflate
+  ACCEPT: */*
+  Content-Length: 212
+  CONNECTION: keep-alive
+  POSTMAN-TOKEN: 4ffcb643-75b1-464d-8422-2db16a225c09
+  HOST: 35.178.24.189
+  CACHE-CONTROL: no-cache
+  USER-AGENT: PostmanRuntime/7.2.0
+[13/Aug/2018:15:09:32] HTTP 
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 137, in _new_conn
+    (self.host, self.port), self.timeout, **extra_kw)
+  File "/usr/lib/python3/dist-packages/urllib3/util/connection.py", line 91, in create_connection
+    raise err
+  File "/usr/lib/python3/dist-packages/urllib3/util/connection.py", line 81, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 560, in urlopen
+    body=body, headers=headers)
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 354, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/usr/lib/python3.5/http/client.py", line 1106, in request
+    self._send_request(method, url, body, headers)
+  File "/usr/lib/python3.5/http/client.py", line 1151, in _send_request
+    self.endheaders(body)
+  File "/usr/lib/python3.5/http/client.py", line 1102, in endheaders
+    self._send_output(message_body)
+  File "/usr/lib/python3.5/http/client.py", line 934, in _send_output
+    self.send(msg)
+  File "/usr/lib/python3.5/http/client.py", line 877, in send
+    self.connect()
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 162, in connect
+    conn = self._new_conn()
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 146, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7f24c83aa7f0>: Failed to establish a new connection: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/cherrypy/_cprequest.py", line 627, in respond
+    self._do_respond(path_info)
+  File "/usr/local/lib/python3.5/dist-packages/cherrypy/_cprequest.py", line 686, in _do_respond
+    response.body = self.handler()
+  File "/usr/local/lib/python3.5/dist-packages/cherrypy/lib/encoding.py", line 221, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/usr/local/lib/python3.5/dist-packages/cherrypy/_cpdispatch.py", line 54, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "server.py", line 54, in default
+    closeDriver()
+  File "server.py", line 20, in closeDriver
+    driver.close()
+  File "/usr/local/lib/python3.5/dist-packages/selenium/webdriver/remote/webdriver.py", line 687, in close
+    self.execute(Command.CLOSE)
+  File "/usr/local/lib/python3.5/dist-packages/selenium/webdriver/remote/webdriver.py", line 318, in execute
+    response = self.command_executor.execute(driver_command, params)
+  File "/usr/local/lib/python3.5/dist-packages/selenium/webdriver/remote/remote_connection.py", line 375, in execute
+    return self._request(command_info[0], url, body=data)
+  File "/usr/local/lib/python3.5/dist-packages/selenium/webdriver/remote/remote_connection.py", line 397, in _request
+    resp = self._conn.request(method, url, body=body, headers=headers)
+  File "/usr/lib/python3/dist-packages/urllib3/request.py", line 69, in request
+    **urlopen_kw)
+  File "/usr/lib/python3/dist-packages/urllib3/request.py", line 90, in request_encode_url
+    return self.urlopen(method, url, **extra_kw)
+  File "/usr/lib/python3/dist-packages/urllib3/poolmanager.py", line 162, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 630, in urlopen
+    release_conn=release_conn, **response_kw)
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 630, in urlopen
+    release_conn=release_conn, **response_kw)
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 630, in urlopen
+    release_conn=release_conn, **response_kw)
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 610, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "/usr/lib/python3/dist-packages/urllib3/util/retry.py", line 273, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='127.0.0.1', port=42048): Max retries exceeded with url: /session/10eaf95bd98f94d244bf1956544431ea/window (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f24c83aa7f0>: Failed to establish a new connection: [Errno 111] Connection refused',))
+[13/Aug/2018:15:09:32] HTTP 
+Request Headers:
+  Remote-Addr: 89.197.174.98
+  Content-Type: application/json
+  ACCEPT-ENCODING: gzip, deflate
+  ACCEPT: */*
+  Content-Length: 51
+  CONNECTION: keep-alive
+  POSTMAN-TOKEN: 9a03cdf1-6daf-406c-95b3-0cda0f175663
+  HOST: 35.178.24.189
+  CACHE-CONTROL: no-cache
+  USER-AGENT: PostmanRuntime/7.2.0
+[13/Aug/2018:15:09:35] ENGINE Keyboard Interrupt: shutting down bus
+[13/Aug/2018:15:09:35] ENGINE Bus STOPPING
+[13/Aug/2018:15:09:35] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('127.0.0.1', 8080)) shut down
+[13/Aug/2018:15:09:36] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('0.0.0.0', 80)) shut down
+[13/Aug/2018:15:09:36] ENGINE Stopped thread 'Autoreloader'.
+[13/Aug/2018:15:09:36] ENGINE Bus STOPPED
+[13/Aug/2018:15:09:36] ENGINE Bus EXITING
+[13/Aug/2018:15:09:36] ENGINE Bus EXITED
+[13/Aug/2018:15:09:36] ENGINE Waiting for child threads to terminate...
+[13/Aug/2018:15:09:36] ENGINE Waiting for thread CP Server Thread-5.
+[13/Aug/2018:15:09:41] ENGINE Listening for SIGTERM.
+[13/Aug/2018:15:09:41] ENGINE Listening for SIGUSR1.
+[13/Aug/2018:15:09:41] ENGINE Listening for SIGHUP.
+[13/Aug/2018:15:09:41] ENGINE Bus STARTING
+[13/Aug/2018:15:09:41] ENGINE Started monitor thread 'Autoreloader'.
+[13/Aug/2018:15:09:41] ENGINE Serving on http://0.0.0.0
+[13/Aug/2018:15:09:41] ENGINE Serving on http://127.0.0.1:8080
+[13/Aug/2018:15:09:41] ENGINE Bus STARTED
+[13/Aug/2018:15:10:01] HTTP 
+Request Headers:
+  CONNECTION: keep-alive
+  Content-Type: application/json
+  ACCEPT-ENCODING: gzip, deflate
+  HOST: 35.178.24.189
+  ACCEPT: */*
+  Content-Length: 51
+  CACHE-CONTROL: no-cache
+  Remote-Addr: 89.197.174.98
+  POSTMAN-TOKEN: 4c0ad412-85fc-43fb-98ac-a4e73ff71ad0
+  USER-AGENT: PostmanRuntime/7.2.0
+[13/Aug/2018:15:10:01] HTTP 
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 137, in _new_conn
+    (self.host, self.port), self.timeout, **extra_kw)
+  File "/usr/lib/python3/dist-packages/urllib3/util/connection.py", line 91, in create_connection
+    raise err
+  File "/usr/lib/python3/dist-packages/urllib3/util/connection.py", line 81, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 560, in urlopen
+    body=body, headers=headers)
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 354, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/usr/lib/python3.5/http/client.py", line 1106, in request
+    self._send_request(method, url, body, headers)
+  File "/usr/lib/python3.5/http/client.py", line 1151, in _send_request
+    self.endheaders(body)
+  File "/usr/lib/python3.5/http/client.py", line 1102, in endheaders
+    self._send_output(message_body)
+  File "/usr/lib/python3.5/http/client.py", line 934, in _send_output
+    self.send(msg)
+  File "/usr/lib/python3.5/http/client.py", line 877, in send
+    self.connect()
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 162, in connect
+    conn = self._new_conn()
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 146, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7f15c802ce48>: Failed to establish a new connection: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/cherrypy/_cprequest.py", line 627, in respond
+    self._do_respond(path_info)
+  File "/usr/local/lib/python3.5/dist-packages/cherrypy/_cprequest.py", line 686, in _do_respond
+    response.body = self.handler()
+  File "/usr/local/lib/python3.5/dist-packages/cherrypy/lib/encoding.py", line 221, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/usr/local/lib/python3.5/dist-packages/cherrypy/_cpdispatch.py", line 54, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "server.py", line 54, in default
+    closeDriver()
+  File "server.py", line 20, in closeDriver
+    driver.close()
+  File "/usr/local/lib/python3.5/dist-packages/selenium/webdriver/remote/webdriver.py", line 687, in close
+    self.execute(Command.CLOSE)
+  File "/usr/local/lib/python3.5/dist-packages/selenium/webdriver/remote/webdriver.py", line 318, in execute
+    response = self.command_executor.execute(driver_command, params)
+  File "/usr/local/lib/python3.5/dist-packages/selenium/webdriver/remote/remote_connection.py", line 375, in execute
+    return self._request(command_info[0], url, body=data)
+  File "/usr/local/lib/python3.5/dist-packages/selenium/webdriver/remote/remote_connection.py", line 397, in _request
+    resp = self._conn.request(method, url, body=body, headers=headers)
+  File "/usr/lib/python3/dist-packages/urllib3/request.py", line 69, in request
+    **urlopen_kw)
+  File "/usr/lib/python3/dist-packages/urllib3/request.py", line 90, in request_encode_url
+    return self.urlopen(method, url, **extra_kw)
+  File "/usr/lib/python3/dist-packages/urllib3/poolmanager.py", line 162, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 630, in urlopen
+    release_conn=release_conn, **response_kw)
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 630, in urlopen
+    release_conn=release_conn, **response_kw)
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 630, in urlopen
+    release_conn=release_conn, **response_kw)
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 610, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "/usr/lib/python3/dist-packages/urllib3/util/retry.py", line 273, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='127.0.0.1', port=32902): Max retries exceeded with url: /session/0accd471bfae099e866a512c2dc28e92/window (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f15c802ce48>: Failed to establish a new connection: [Errno 111] Connection refused',))
+[13/Aug/2018:15:27:09] ENGINE Keyboard Interrupt: shutting down bus
+[13/Aug/2018:15:27:09] ENGINE Bus STOPPING
+[13/Aug/2018:15:27:09] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('0.0.0.0', 80)) shut down
+[13/Aug/2018:15:27:09] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('127.0.0.1', 8080)) shut down
+[13/Aug/2018:15:27:09] ENGINE Stopped thread 'Autoreloader'.
+[13/Aug/2018:15:27:09] ENGINE Bus STOPPED
+[13/Aug/2018:15:27:09] ENGINE Bus EXITING
+[13/Aug/2018:15:27:09] ENGINE Bus EXITED
+[13/Aug/2018:15:27:09] ENGINE Waiting for child threads to terminate...
+[13/Aug/2018:15:30:59] ENGINE Listening for SIGTERM.
+[13/Aug/2018:15:30:59] ENGINE Listening for SIGUSR1.
+[13/Aug/2018:15:30:59] ENGINE Listening for SIGHUP.
+[13/Aug/2018:15:30:59] ENGINE Bus STARTING
+[13/Aug/2018:15:30:59] ENGINE Started monitor thread 'Autoreloader'.
+[13/Aug/2018:15:30:59] ENGINE Serving on http://127.0.0.1:8080
+[13/Aug/2018:15:30:59] ENGINE Serving on http://0.0.0.0
+[13/Aug/2018:15:30:59] ENGINE Bus STARTED
+[13/Aug/2018:15:31:20] HTTP 
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 137, in _new_conn
+    (self.host, self.port), self.timeout, **extra_kw)
+  File "/usr/lib/python3/dist-packages/urllib3/util/connection.py", line 91, in create_connection
+    raise err
+  File "/usr/lib/python3/dist-packages/urllib3/util/connection.py", line 81, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 560, in urlopen
+    body=body, headers=headers)
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 354, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/usr/lib/python3.5/http/client.py", line 1106, in request
+    self._send_request(method, url, body, headers)
+  File "/usr/lib/python3.5/http/client.py", line 1151, in _send_request
+    self.endheaders(body)
+  File "/usr/lib/python3.5/http/client.py", line 1102, in endheaders
+    self._send_output(message_body)
+  File "/usr/lib/python3.5/http/client.py", line 934, in _send_output
+    self.send(msg)
+  File "/usr/lib/python3.5/http/client.py", line 877, in send
+    self.connect()
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 162, in connect
+    conn = self._new_conn()
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 146, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7f1a20195be0>: Failed to establish a new connection: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/cherrypy/_cprequest.py", line 627, in respond
+    self._do_respond(path_info)
+  File "/usr/local/lib/python3.5/dist-packages/cherrypy/_cprequest.py", line 686, in _do_respond
+    response.body = self.handler()
+  File "/usr/local/lib/python3.5/dist-packages/cherrypy/lib/encoding.py", line 221, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/usr/local/lib/python3.5/dist-packages/cherrypy/_cpdispatch.py", line 54, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "server.py", line 51, in default
+    driver.close()
+  File "/usr/local/lib/python3.5/dist-packages/selenium/webdriver/remote/webdriver.py", line 687, in close
+    self.execute(Command.CLOSE)
+  File "/usr/local/lib/python3.5/dist-packages/selenium/webdriver/remote/webdriver.py", line 318, in execute
+    response = self.command_executor.execute(driver_command, params)
+  File "/usr/local/lib/python3.5/dist-packages/selenium/webdriver/remote/remote_connection.py", line 375, in execute
+    return self._request(command_info[0], url, body=data)
+  File "/usr/local/lib/python3.5/dist-packages/selenium/webdriver/remote/remote_connection.py", line 397, in _request
+    resp = self._conn.request(method, url, body=body, headers=headers)
+  File "/usr/lib/python3/dist-packages/urllib3/request.py", line 69, in request
+    **urlopen_kw)
+  File "/usr/lib/python3/dist-packages/urllib3/request.py", line 90, in request_encode_url
+    return self.urlopen(method, url, **extra_kw)
+  File "/usr/lib/python3/dist-packages/urllib3/poolmanager.py", line 162, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 630, in urlopen
+    release_conn=release_conn, **response_kw)
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 630, in urlopen
+    release_conn=release_conn, **response_kw)
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 630, in urlopen
+    release_conn=release_conn, **response_kw)
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 610, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "/usr/lib/python3/dist-packages/urllib3/util/retry.py", line 273, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='127.0.0.1', port=55566): Max retries exceeded with url: /session/d67e26f467eee77421417eba61d214fe/window (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f1a20195be0>: Failed to establish a new connection: [Errno 111] Connection refused',))
+[13/Aug/2018:15:31:20] HTTP 
+Request Headers:
+  POSTMAN-TOKEN: 5526adca-3dd2-4e48-8136-435a2d86eb83
+  Content-Type: application/json
+  CACHE-CONTROL: no-cache
+  Content-Length: 51
+  ACCEPT-ENCODING: gzip, deflate
+  Remote-Addr: 89.197.174.98
+  HOST: 35.178.24.189
+  ACCEPT: */*
+  CONNECTION: keep-alive
+  USER-AGENT: PostmanRuntime/7.2.0
+[13/Aug/2018:15:39:16] ENGINE Keyboard Interrupt: shutting down bus
+[13/Aug/2018:15:39:16] ENGINE Bus STOPPING
+[13/Aug/2018:15:39:16] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('127.0.0.1', 8080)) shut down
+[13/Aug/2018:15:39:16] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('0.0.0.0', 80)) shut down
+[13/Aug/2018:15:39:16] ENGINE Stopped thread 'Autoreloader'.
+[13/Aug/2018:15:39:16] ENGINE Bus STOPPED
+[13/Aug/2018:15:39:16] ENGINE Bus EXITING
+[13/Aug/2018:15:39:16] ENGINE Bus EXITED
+[13/Aug/2018:15:39:16] ENGINE Waiting for child threads to terminate...
+[13/Aug/2018:15:40:15] ENGINE Listening for SIGHUP.
+[13/Aug/2018:15:40:15] ENGINE Listening for SIGTERM.
+[13/Aug/2018:15:40:15] ENGINE Listening for SIGUSR1.
+[13/Aug/2018:15:40:15] ENGINE Bus STARTING
+[13/Aug/2018:15:40:15] ENGINE Started monitor thread 'Autoreloader'.
+[13/Aug/2018:15:40:15] ENGINE Serving on http://0.0.0.0
+[13/Aug/2018:15:40:15] ENGINE Serving on http://127.0.0.1:8080
+[13/Aug/2018:15:40:15] ENGINE Bus STARTED
+[13/Aug/2018:15:40:35] HTTP 
+Request Headers:
+  CACHE-CONTROL: no-cache
+  POSTMAN-TOKEN: 38ebf4e6-5c61-430e-a53a-1ad2c4a93b8d
+  USER-AGENT: PostmanRuntime/7.2.0
+  Remote-Addr: 89.197.174.98
+  Content-Length: 51
+  HOST: 35.178.24.189
+  ACCEPT: */*
+  ACCEPT-ENCODING: gzip, deflate
+  Content-Type: application/json
+  CONNECTION: keep-alive
+[13/Aug/2018:15:40:35] HTTP 
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 137, in _new_conn
+    (self.host, self.port), self.timeout, **extra_kw)
+  File "/usr/lib/python3/dist-packages/urllib3/util/connection.py", line 91, in create_connection
+    raise err
+  File "/usr/lib/python3/dist-packages/urllib3/util/connection.py", line 81, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 560, in urlopen
+    body=body, headers=headers)
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 354, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/usr/lib/python3.5/http/client.py", line 1106, in request
+    self._send_request(method, url, body, headers)
+  File "/usr/lib/python3.5/http/client.py", line 1151, in _send_request
+    self.endheaders(body)
+  File "/usr/lib/python3.5/http/client.py", line 1102, in endheaders
+    self._send_output(message_body)
+  File "/usr/lib/python3.5/http/client.py", line 934, in _send_output
+    self.send(msg)
+  File "/usr/lib/python3.5/http/client.py", line 877, in send
+    self.connect()
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 162, in connect
+    conn = self._new_conn()
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 146, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7f0854566ba8>: Failed to establish a new connection: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/cherrypy/_cprequest.py", line 627, in respond
+    self._do_respond(path_info)
+  File "/usr/local/lib/python3.5/dist-packages/cherrypy/_cprequest.py", line 686, in _do_respond
+    response.body = self.handler()
+  File "/usr/local/lib/python3.5/dist-packages/cherrypy/lib/encoding.py", line 221, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/usr/local/lib/python3.5/dist-packages/cherrypy/_cpdispatch.py", line 54, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "server.py", line 54, in default
+    driver.close()
+  File "/usr/local/lib/python3.5/dist-packages/selenium/webdriver/remote/webdriver.py", line 687, in close
+    self.execute(Command.CLOSE)
+  File "/usr/local/lib/python3.5/dist-packages/selenium/webdriver/remote/webdriver.py", line 318, in execute
+    response = self.command_executor.execute(driver_command, params)
+  File "/usr/local/lib/python3.5/dist-packages/selenium/webdriver/remote/remote_connection.py", line 375, in execute
+    return self._request(command_info[0], url, body=data)
+  File "/usr/local/lib/python3.5/dist-packages/selenium/webdriver/remote/remote_connection.py", line 397, in _request
+    resp = self._conn.request(method, url, body=body, headers=headers)
+  File "/usr/lib/python3/dist-packages/urllib3/request.py", line 69, in request
+    **urlopen_kw)
+  File "/usr/lib/python3/dist-packages/urllib3/request.py", line 90, in request_encode_url
+    return self.urlopen(method, url, **extra_kw)
+  File "/usr/lib/python3/dist-packages/urllib3/poolmanager.py", line 162, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 630, in urlopen
+    release_conn=release_conn, **response_kw)
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 630, in urlopen
+    release_conn=release_conn, **response_kw)
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 630, in urlopen
+    release_conn=release_conn, **response_kw)
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 610, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "/usr/lib/python3/dist-packages/urllib3/util/retry.py", line 273, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='127.0.0.1', port=51371): Max retries exceeded with url: /session/a2efe903d9c50fee34bfadf6070827ef/window (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f0854566ba8>: Failed to establish a new connection: [Errno 111] Connection refused',))
+[13/Aug/2018:15:40:53] ENGINE Keyboard Interrupt: shutting down bus
+[13/Aug/2018:15:40:53] ENGINE Bus STOPPING
+[13/Aug/2018:15:40:53] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('0.0.0.0', 80)) shut down
+[13/Aug/2018:15:40:53] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('127.0.0.1', 8080)) shut down
+[13/Aug/2018:15:40:53] ENGINE Stopped thread 'Autoreloader'.
+[13/Aug/2018:15:40:53] ENGINE Bus STOPPED
+[13/Aug/2018:15:40:53] ENGINE Bus EXITING
+[13/Aug/2018:15:40:53] ENGINE Bus EXITED
+[13/Aug/2018:15:40:53] ENGINE Waiting for child threads to terminate...
