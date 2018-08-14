@@ -41,9 +41,13 @@ atexit.register(closeDriver)
 def handler(params,context=''):
     global cookie
     global scraper
+    keychange = False
     if 'key' in params.keys():
-        cookie = params['key']        
-    if scraper == None:
+        if cookie != params['key']:
+            cookie = params['key']
+            keychange = True
+    print(cookie)
+    if scraper == None or keychange:
         scraper = ProfileScraper(driver=driver,cookie=cookie) 
     if 'url' in params.keys():
         try:
@@ -51,4 +55,4 @@ def handler(params,context=''):
             return profile.to_dict()
         except Exception as e:
             traceback.print_exc(file=sys.stdout)
-            return e
+            raise(e)
